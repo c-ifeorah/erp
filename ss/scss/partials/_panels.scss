@@ -1,0 +1,347 @@
+/*------------------------------------*\
+	$$ Just Checking - Panels
+\*------------------------------------*/
+
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables 
+  * Global Mixins
+Contents:
+  * Imports
+  * Panel Inner
+  * Panel Header
+    * Panel header title
+    * Panel header links
+  * Horizontal Panel
+    * Panel Inner
+  * Vertical Panel
+    * Panel Inner
+  * Panel Inner
+  * Vertical Panel Helper Class
+  * Top Panel
+    * State classes
+    * Keyframes
+  * Bottom Panel
+    * State classes
+    * Keyframes
+  * Right Panel
+    * State classes
+    * Keyframes
+  * Left Panel
+    * State classes
+    * Keyframes
+*/
+
+
+
+
+/*------------------------------------*\
+  $ Imports
+\*------------------------------------*/
+
+@import "../modules/_mixins";
+@import "compass/css3/box-shadow";
+@import "compass/typography/links/link-colors";
+@import "compass/css3/border-radius";
+
+
+
+
+/*------------------------------------*\
+  $ Panel Base
+\*------------------------------------*/
+
+.panel {
+  position: fixed;
+  height: 100%;
+  z-index: 10000;
+  background-color: $white;
+  @include box-shadow(0 0 6px $grayDark);
+
+  // Make sure that the first div (Backbone generated) has 100% height
+  > div {
+    height: 100%;
+  }
+}
+
+
+
+
+/*------------------------------------*\
+  $ Panel Inner
+\*------------------------------------*/
+
+.panel-inner { 
+  height: 100%;
+  @include scroll-y();
+}
+
+
+
+
+/*------------------------------------*\
+  $ Panel Header
+\*------------------------------------*/
+
+.panel-header {
+  @include menu-base();
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 0 0 0 $defaultPadding;
+  width: 100%;
+
+  /* Panel header title */
+  
+  .panel-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    line-height: 46px;
+    line-height: 4.6rem;
+  }
+
+  /* Close link */
+
+  .panel-close {
+    float: right;
+    text-align: center;
+    width: $touchMinimum;
+    height: $touchMinimum;
+    line-height: 38px;
+    line-height: 3.8rem;
+    margin-left: $defaultMargin;
+  }
+
+  a {
+    color: $white;
+  }
+
+  i {
+    line-height: 4.4rem;
+  }
+
+}
+
+
+
+
+/*------------------------------------*\
+  $ Horizontal Panel
+\*------------------------------------*/
+
+.panel-horizontal {
+  width: 80%;
+  max-width: $largeBreakPoint;
+  height: 100%;
+
+  /* Panel Inner */
+
+  .panel-inner {
+    @extend .panel-inner;
+    margin-top: 44px;
+    padding: $defaultPadding $defaultPadding $defaultPadding*3 $defaultPadding;
+  }
+
+  .panel-horizontal-menu {
+    li {
+      border-top: $defaultBorderWidth $defaultBorderStyle $grayDark;
+    }
+
+    li:last-child {
+      border-bottom: $defaultBorderWidth $defaultBorderStyle $grayDark;
+    }
+  }
+}
+
+
+
+
+/*------------------------------------*\
+  $ Vertical Panel
+\*------------------------------------*/
+
+.panel-vertical {
+  width: 94%;
+  left: 3%;
+  height: auto;
+  min-height: 50%;  
+  max-height: 90%;
+  z-index: 2;
+
+  /* Panel Inner */
+
+  .panel-inner {
+    @extend .panel-inner;
+    padding: 0 $defaultPadding $defaultPadding*2 $defaultPadding;
+    margin-top: 44px;
+    padding: $defaultPadding $defaultPadding $defaultPadding*3 $defaultPadding;
+  }
+
+}
+
+
+
+
+/*------------------------------------*\
+  $ Vertical Panel Helper Class
+\*------------------------------------*/
+
+.panel-vertical-tall {
+  height: 100%;
+  padding-bottom: $defaultPadding*3;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Top Panel
+\*------------------------------------*/
+
+.panel-top {
+  top: -110%;
+  background-color: $white;
+}
+
+/* State classes */
+
+.panel-top-in {
+  @include animation(slidePanelTopIn, 0.4s, 0, ease, 1);
+  top: 7%;
+}
+
+.panel-top-out {
+  @include animation(slidePanelTopOut, 0.3s, 0, ease, 1);
+  top: -110%;
+}
+
+/* Keyframes */
+
+@include keyframes(slidePanelTopIn) {
+  from { top: -100%; }
+  to { top: 7%; }
+}
+
+@include keyframes(slidePanelTopOut) {
+  from { top: 7%; }
+  to { top: -100%; }
+}
+
+
+
+
+/*------------------------------------*\
+  $ Bottom Panel
+\*------------------------------------*/
+
+.panel-bottom {  
+  bottom: -110%;
+}
+
+/* State classes */
+
+.panel-bottom-in {
+  @include animation(slidePanelBottomIn, 0.4s, 0, ease, 1);
+  bottom: 0;
+}
+
+.panel-bottom-out {
+  @include animation(slidePanelBottomOut, 0.3s, 0, ease, 1);
+  bottom: -100%;
+}
+
+/* Keyframes */
+
+@include keyframes(slidePanelBottomIn) {
+  from { bottom: -100%; }
+  to { bottom: 0; }
+}
+
+@include keyframes(slidePanelBottomOut) {
+  from { bottom: 0; }
+  to { bottom: -100%; }
+}
+
+
+
+
+/*------------------------------------*\
+  $ Right Panel
+\*------------------------------------*/
+
+.panel-right {
+  right: -81%;
+  top: 0;
+}
+
+/* State classes */
+
+.panel-right-in {
+  @include animation(slidePanelRightIn, 0.4s, 0, ease, 1);
+  right: 0;
+}
+
+.panel-right-out {
+  @include animation(slidePanelRightOut, 0.3s, 0, ease, 1);
+  right: -81%;
+}
+
+/* Keyframes */
+
+@include keyframes(slidePanelRightIn) {
+  from { right: -81%; }
+  to { right: 0; }
+}
+
+@include keyframes(slidePanelRightOut) {
+  from { right: 0; }
+  to { right: -81%; }
+}
+
+
+
+
+/*------------------------------------*\
+  $ Left Panel
+\*------------------------------------*/
+
+.panel-left {
+  left: -81%; 
+  top: 0;
+}
+
+/* State classes */
+
+.panel-left-in {
+  @include animation(slidePanelLeftIn, 0.4s, 0, ease, 1);
+  left: 0;
+}
+
+.panel-left-out {
+  @include animation(slidePanelLeftOut, 0.3s, 0, ease, 1);
+  left: -81%;
+}
+
+/* Keyframes */
+
+@include keyframes(slidePanelLeftIn) {
+  from { left: -81%; }
+  to { left: 0; }
+}
+
+@include keyframes(slidePanelLeftOut) {
+  from { left: 0; }
+  to { left: -81%; }
+}
+
+
+
+
+/*------------------------------------*\
+  $ Media Queries
+\*------------------------------------*/
+
+@import "../partials/_panels-mq";

@@ -1,0 +1,100 @@
+/*------------------------------------*\
+$$ Just Checking - Sub Menu
+\*------------------------------------*/
+
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+  * Global Mixins
+Contents:
+  * Imports
+  * Sub Menu
+  * List items
+*/
+
+
+
+
+/*------------------------------------*\
+  $ Imports
+\*------------------------------------*/
+
+@import "../modules/_mixins";
+@import "compass/css3/box-shadow";
+@import "compass/typography/links/link-colors";
+
+
+
+
+/*------------------------------------*\
+  $ Sub Menu
+\*------------------------------------*/
+
+.sub-menu {
+  // Menu base styling from mixins
+  @include menu-base();
+  border-bottom: $defaultBorderWidth $defaultBorderStyle $defaultBorderColor;
+
+  // Sub menu list item styles
+  li {
+    display: inline-block;
+    height: $touchMinimum;
+    text-align: center;
+    border-right: $defaultBorderWidth $defaultBorderStyle $defaultBorderColor;
+  }
+
+  li:last-child {
+    border-right: none;
+  }
+
+  // Sub menu link styles
+  a {
+    display: block;
+    text-decoration: none;    
+    height: $touchMinimum;
+    width: 100%;
+    line-height: 40px;
+    line-height: 4rem;
+  }
+
+  a,
+  a:visited,
+  a:hover,
+  a:focus {
+    @include link-colors($textColor);
+  }
+
+}
+
+
+
+
+/*------------------------------------*\
+  $ List items
+\*------------------------------------*/
+
+// Sub menu with 2 items
+.sub-menu-2 {
+  // Sub menu list item styles
+  li {
+    width: 50%;
+  }
+}
+
+// Sub menu with 3 items
+.sub-menu-3 {
+  // Sub menu list item styles
+  li {
+    width: 33.2%;
+  }
+}
+
+// Sub menu with 4 items
+.sub-menu-4 {
+  // Sub menu list item styles
+  li {
+    width: 24%;
+  }
+}

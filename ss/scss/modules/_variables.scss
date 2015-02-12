@@ -1,0 +1,236 @@
+/*------------------------------------*\
+  $$ Just Checking - Global Variables
+\*------------------------------------*/
+
+/*
+Requires:
+  * SASS
+Contents:
+  * Colours
+    * Brand colours 
+    * Button & alert colours
+    * Background colours
+  * Scaffolding
+    * Max & Min Widths
+    * Default Breakpoints
+  * Forms
+  * Buttons
+    * Colours
+    * Sizes
+  * Margin & Padding
+  * Typography
+    * Font Family
+    * Text Colour
+    * Text size
+    * Text weight
+  * Borders
+  * Dimensions
+  * Shadows
+  * Tables
+  * Breakpoints
+*/
+
+
+
+
+/*------------------------------------*\
+  $ Colours
+\*------------------------------------*/
+
+/*
+1. White
+* FFFFFF
+
+2. The 3 Greys
+* F8F8F8   (Light)
+* CCCCCC (Mid)
+* 666666   (Dark)
+
+3. The 3 Blues
+* DDE1EC (Light)
+* 00528D  (Mid)
+* 001D47  (Dark)
+*/
+
+$black: black; 
+$grayDarker: #111; 
+$grayDark: #333;
+$grayMid: #666;
+$gray: #999;
+$grayLight: #ccc;
+$grayLightPublic: #ddd;
+$grayLighter: #eee;
+$grayFaint: #F8F8F8;
+$white: #fff;
+$semiWhite: rgba(255, 255, 255, 0.6);
+
+/* Brand colours */
+
+$brandBlueLight: #DDE1EC;
+$brandBlue: #00528D;
+$brandBlueHover: #001D47;
+$brandBlueDark: #001D47;
+
+// Urikah
+$brandPurple: #AE3972;
+$brandPurpleDark: #80305F;
+
+/* Button & alert colours */
+
+$errorColor: #c60f13; // RGB 198, 15, 19
+$errorColorRGB: rgba(198,15,19,0.9);
+$successColor: #4F8A1E; // RGB 79, 138, 30
+$successColorRGB: rgba(79,138,30,0.9);
+$buttonColor: #2ba6cb;
+
+/* Background colours */
+
+$bodyBackgroundColor: $grayLighter;
+
+
+
+
+/*------------------------------------*\
+  $ Scaffolding
+\*------------------------------------*/
+
+/* Max & Min Widths */
+
+$minPageWidth: 320px;
+$maxPageWidth: 980px;
+
+/* Default Breakpoints */
+
+$desktopBreakPoint: 76.7rem;
+$desktopBreakPointIE: 767px;
+$defaultMenuWidth: 70rem;
+$defaultMenuWidthIE: 320px;
+
+
+
+
+/*------------------------------------*\
+  $ Forms
+\*------------------------------------*/
+
+$inputHeight: 32px;
+$selectHeight: 35px;
+
+
+
+
+/*------------------------------------*\
+  $ Buttons
+\*------------------------------------*/
+
+/* Colours */
+
+$btnPrimaryBackground: $grayDarker;
+$btnPrimaryBackgroundHighlight: $grayDark;
+
+/* Sizes */
+
+$inlineButtonHeight: 32px;
+
+
+
+
+/*------------------------------------*\
+  $ Margin & Padding
+\*------------------------------------*/
+
+$defaultPadding: 1em;
+$defaultMargin: 0.4em;
+$fixedWrapperMargin: 0em;
+
+
+
+/*------------------------------------*\
+  $ Typography
+\*------------------------------------*/
+
+/* Font Family */
+
+$fontFamily: sans-serif;
+$fontSansSerif: sans-serif;
+$headerFont: sans-serif;
+
+/* Text Colour */
+
+$textColor: $grayDark;
+
+/* Text size */
+
+$baseFontSize: 1.4rem;
+$baseFontSizeFallback: 14px;
+
+/* Text weight */
+
+$defaultBold: 800;
+
+
+
+
+/*------------------------------------*\
+  $ Borders
+\*------------------------------------*/
+
+$defaultBorderWidth: 1px;
+$defaultBorderStyle: solid;
+$defaultBorderColor: $grayLight;
+$defaultBorderRadius: 3px;
+
+$defaultBorder: $defaultBorderWidth $defaultBorderStyle $defaultBorderColor;
+
+
+
+
+/*------------------------------------*\
+  $ Dimensions
+\*------------------------------------*/
+
+// Maximum readable text width
+$readableWidth: 42em;
+
+// The minimum size for a touchable area
+$touchMinimum: 44px;
+
+// Large viewport menu size
+$largeMenuHeight: 52px;
+
+
+
+
+/*------------------------------------*\
+  $ Shadows
+\*------------------------------------*/
+
+$buttonShadow: 0 1px 0 rgba(255, 255, 255, .5) inset, 0 0 5px rgba(0, 0, 0, .1) inset, 0 1px 1px rgba(0, 0, 0, .5);
+$buttonActiveShadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset;
+$buttonFocusShadow: 0 0 3px $brandBlue, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+
+
+
+
+/*------------------------------------*\
+  $ Tables
+\*------------------------------------*/
+
+$tableBackground: $white;
+$tableBackgroundAccent: $grayFaint;
+$tableBackgroundHover: $grayLighter;
+
+
+
+
+/*------------------------------------*\
+  $ Breakpoints
+\*------------------------------------*/
+
+$smallBreakPoint: 480px;
+$mediumBreakPoint: 768px;
+$largeBreakPoint: 940px;
+$vastBreakPoint: 1366px;
+$giganticBreakPoint: 1440px;
+$defaultMenuWidth: 320px;
+$smallPanelWidth: 280px;

@@ -1,0 +1,189 @@
+/*------------------------------------*\
+$$ Just Checking - Nav Bar
+\*------------------------------------*/
+
+/*
+Requires:
+  * SASS 
+Contents:
+  * Imports
+  * Nav Bar
+  * Header
+  * Vertical Nav Bar
+  * Helper Classes
+    * Second level text
+    * New item styling
+  * IE8 Fixes
+  * Media Queries
+    * >= 768px
+    * <= 767px
+*/
+
+
+
+
+/*------------------------------------*\
+  $ Imports
+\*------------------------------------*/
+
+@import "../modules/_mixins";
+@import "compass/css3/box-shadow";
+
+
+
+
+/*------------------------------------*\
+  $ Nav Bar
+\*------------------------------------*/
+
+.nav-bar {
+  @include remove-margin-padding;
+  border-bottom: $defaultBorderWidth $defaultBorderStyle $defaultBorderColor;
+  @include box-shadow(0 2px 2px $grayLighter);
+
+  li {
+    background: $white;
+    @include background-image(linear-gradient($white, $bodyBackgroundColor));
+    float: left;
+    display: block;
+    position: relative;
+    @include remove-margin-padding;
+    border: $defaultBorderWidth $defaultBorderStyle $defaultBorderColor;
+    border-right: none;
+    line-height: 14px;
+    line-height: 1.4em;
+  }
+
+  li:last-child {
+    border-bottom: $defaultBorderWidth $defaultBorderStyle $defaultBorderColor;
+  }
+
+  li:hover {
+    background: $white;
+  }
+
+  li > a {
+    color: $textColor;
+    padding: $defaultPadding;
+  }
+
+  li ul {
+    margin-bottom: 0;
+  }
+
+  li > a:first-child {
+    padding: $defaultPadding $defaultPadding*3 $defaultPadding $defaultPadding;
+    position: relative;
+    display: block;
+    text-decoration: none;
+  }
+
+}
+
+
+
+
+/*------------------------------------*\
+  $ Header
+\*------------------------------------*/
+
+.side-nav-header {
+  font-family: $fontFamily;
+  font-weight: bold;
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: $white;
+  padding: 1em; /* This needs to match the nav-bar vertical padding */
+}
+
+
+
+
+/*------------------------------------*\
+  $ Vertical Nav Bar
+\*------------------------------------*/
+
+.nav-bar.vertical {
+  margin-top: 0;
+}
+
+.nav-bar.vertical > li {
+  float: none;
+  border-bottom: none;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Helper Classes
+\*------------------------------------*/
+
+/* Second level text */
+
+.menu-secondary {
+  display: block;
+  font-size: 0.9em;
+  color: $gray;
+}
+
+
+
+/*------------------------------------*\
+  $ Media Queries
+\*------------------------------------*/
+
+/* >= 768px */
+
+@media only screen and (min-width: 768px) {
+
+  // Menu panel item
+  .nav-bar {
+
+    > li {
+      @include box-shadow(inset -5px 0 10px -5px $grayLight);
+    }
+
+    > li.active {
+      @include box-shadow(none);
+    }
+
+    > li.active i,
+    > li.active a,
+    > li.active .menu-secondary {
+      color: $brandBlue;
+    }
+
+  }
+
+}
+
+/* <= 767px */
+
+@media only screen and (max-width: 767px) {
+  
+  .nav-bar {
+    height: auto;
+
+    li {
+      float: none;
+      display: block;
+      border-right: none;
+    }
+
+    li > a.main {
+      text-align: left;
+      border-top: 1px solid #ddd;
+      border-right: none;
+    }
+
+    li:first-child > a.main {
+      border-top: none;
+    }
+  }
+
+  .nav-bar.vertical > li:last-child {
+    border-bottom: none;
+  }
+
+}

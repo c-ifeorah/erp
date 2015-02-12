@@ -1,0 +1,300 @@
+/*------------------------------------*\
+  $$ Just Checking - Slim Menu
+\*------------------------------------*/
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+  * Global Mixins
+Contents:
+  * Imports
+*/
+/*------------------------------------*\
+  $ Imports
+\*------------------------------------*/
+/*------------------------------------*\
+  $$ Just Checking - Global Mixins
+\*------------------------------------*/
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+Contents:
+  * Imports
+  * Utility
+    * Clearfix
+    * Reset Margin & Padding
+  * Borders
+  * Backgrounds
+  * Gradients
+  * Menus
+  * Buttons
+    * Default button
+    * Submit button
+  * Overlay
+  * Text Trim
+  * Scroll
+  * Links
+  * Icons
+  * Animations
+  * Visibility
+*/
+/*------------------------------------*\ 
+  $ Imports
+\*------------------------------------*/
+/*------------------------------------*\
+  $$ Just Checking - Global Variables
+\*------------------------------------*/
+/*
+Requires:
+  * SASS
+Contents:
+  * Colours
+    * Brand colours 
+    * Button & alert colours
+    * Background colours
+  * Scaffolding
+    * Max & Min Widths
+    * Default Breakpoints
+  * Forms
+  * Buttons
+    * Colours
+    * Sizes
+  * Margin & Padding
+  * Typography
+    * Font Family
+    * Text Colour
+    * Text size
+    * Text weight
+  * Borders
+  * Dimensions
+  * Shadows
+  * Tables
+  * Breakpoints
+*/
+/*------------------------------------*\
+  $ Colours
+\*------------------------------------*/
+/*
+1. White
+* FFFFFF
+
+2. The 3 Greys
+* F8F8F8   (Light)
+* CCCCCC (Mid)
+* 666666   (Dark)
+
+3. The 3 Blues
+* DDE1EC (Light)
+* 00528D  (Mid)
+* 001D47  (Dark)
+*/
+/* Brand colours */
+/* Button & alert colours */
+/* Background colours */
+/*------------------------------------*\
+  $ Scaffolding
+\*------------------------------------*/
+/* Max & Min Widths */
+/* Default Breakpoints */
+/*------------------------------------*\
+  $ Forms
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Buttons
+\*------------------------------------*/
+/* Colours */
+/* Sizes */
+/*------------------------------------*\
+  $ Margin & Padding
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Typography
+\*------------------------------------*/
+/* Font Family */
+/* Text Colour */
+/* Text size */
+/* Text weight */
+/*------------------------------------*\
+  $ Borders
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Dimensions
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Shadows
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Tables
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Breakpoints
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Utility
+\*------------------------------------*/
+/* Clearfix */
+/* Reset Margin & Padding */
+/*------------------------------------*\
+  $ Borders
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Backgrounds
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Gradients
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Menus
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Buttons
+\*------------------------------------*/
+/* Default button */
+/* Submit button */
+/*------------------------------------*\
+  $ Overlay
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Text Trim
+\*------------------------------------*/
+/*
+Requires:
+  * This requires a container with a set width
+*/
+/*------------------------------------*\
+  $ Scroll
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Links
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Icons
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Animations
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Visibility
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Original code
+\*------------------------------------*/
+/* line 33, ../../../scss/extend/slimmenu/extend.slimmenu.scss */
+.menu-collapser {
+  background-color: #00528d;
+  color: white;
+  text-shadow: none;
+  padding-right: 0;
+}
+
+/* line 40, ../../../scss/extend/slimmenu/extend.slimmenu.scss */
+.collapse-button {
+  position: realtive;
+  width: 44px;
+  background-color: #00528d;
+  background-image: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  right: 0;
+}
+
+/* line 51, ../../../scss/extend/slimmenu/extend.slimmenu.scss */
+.collapse-button:hover, .collapse-button:focus {
+  background-image: none;
+  background-color: #00528d;
+}
+
+/* line 57, ../../../scss/extend/slimmenu/extend.slimmenu.scss */
+ul.slimmenu li,
+ul.slimmenu li ul li {
+  background-color: #00528d;
+}
+
+/* line 62, ../../../scss/extend/slimmenu/extend.slimmenu.scss */
+ul.slimmenu li ul,
+ul.slimmenu li ul li {
+  min-width: 150px !important;
+}
+
+/* line 66, ../../../scss/extend/slimmenu/extend.slimmenu.scss */
+ul.slimmenu li ul {
+  padding: 0;
+}
+
+/* line 70, ../../../scss/extend/slimmenu/extend.slimmenu.scss */
+ul.slimmenu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+  text-shadow: none;
+  padding: 0 1em;
+  height: 26px;
+  line-height: 2.4rem;
+}
+
+/* line 80, ../../../scss/extend/slimmenu/extend.slimmenu.scss */
+ul.slimmenu li a:hover {
+  background-color: #001d47;
+}
+
+/* line 84, ../../../scss/extend/slimmenu/extend.slimmenu.scss */
+ul.slimmenu > li {
+  border-left: 1px solid #dde1ec;
+  margin-right: 0;
+}
+
+/* line 89, ../../../scss/extend/slimmenu/extend.slimmenu.scss */
+.collapse-button {
+  border: none;
+  box-shadow: none;
+}
+
+/*ul.slimmenu li .sub-collapser:before {
+  content: '\e800';
+  margin-right: 0;
+}*/
+/* line 99, ../../../scss/extend/slimmenu/extend.slimmenu.scss */
+ul.slimmenu li .sub-collapser {
+  background: none;
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  margin-left: 1em;
+  /*height: 40px;*/
+}
+
+/* line 110, ../../../scss/extend/slimmenu/extend.slimmenu.scss */
+ul.slimmenu li ul li .sub-collapser {
+  float: right;
+}
+
+/* line 114, ../../../scss/extend/slimmenu/extend.slimmenu.scss */
+ul.slimmenu.collapsed li .sub-collapser {
+  position: absolute;
+  text-align: center;
+  width: 44px;
+  /*float: right;
+  height: 42px;
+  width: 42px;*/
+}
+
+/* line 124, ../../../scss/extend/slimmenu/extend.slimmenu.scss */
+ul.slimmenu.collapsed li ul li {
+  background-color: #000814;
+}
+
+/* line 128, ../../../scss/extend/slimmenu/extend.slimmenu.scss */
+ul.slimmenu li .sub-collapser > i {
+  /*color: lighten($brandBlue, 10%);*/
+  color: white;
+  font-size: 1.4rem;
+}
+
+/* line 134, ../../../scss/extend/slimmenu/extend.slimmenu.scss */
+ul.slimmenu li .sub-collapser > i:before {
+  margin-right: 0;
+}

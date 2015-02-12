@@ -1,0 +1,71 @@
+/*------------------------------------*\
+  $$ Just Checking - Extend Typehead
+\*------------------------------------*/
+
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+  * Global Mixins
+Contents:
+  * Imports
+Notes:
+  * This extends the twitter bootstrap typeahead plugin
+*/
+
+
+
+
+/*------------------------------------*\
+  $ Imports
+\*------------------------------------*/
+
+@import "../../modules/_mixins";
+
+
+
+
+/*------------------------------------*\
+  $ Overwrite
+\*------------------------------------*/
+
+/* Width */
+
+.full-width-typeahead {
+
+  .twitter-typeahead {
+    width: 100%;
+  }
+  
+}
+
+.typeahead,
+.tt-query,
+.tt-hint {
+  width: auto;
+}
+
+/* Font size */
+
+.tt-suggestion {
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: $defaultPadding/2 $defaultPadding;
+}
+
+/* Dropdown */
+
+.tt-dropdown-menu {
+  width: auto;
+  min-width: 200px;
+  padding: $defaultPadding/2 0;
+  margin-top: $defaultMargin/4;
+  @include border-radius($defaultBorderRadius);
+}
+
+/* Hover */
+
+.tt-suggestion.tt-cursor {
+  background-color: $brandBlue;
+}

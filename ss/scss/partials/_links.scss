@@ -1,0 +1,105 @@
+/*------------------------------------*\
+	$$ Just Checking - Links
+\*------------------------------------*/
+
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+Contents:
+  * Imports
+  * Variables
+ 	* Links
+  * Decoration
+    * hover
+  * Disable
+  * Media Queries
+    * >= 940px
+*/
+
+
+
+
+/*------------------------------------*\
+  $ Imports
+\*------------------------------------*/
+
+@import "../modules/_variables";
+@import "compass/typography/links/link-colors";
+@import "../modules/_media-queries";
+
+
+
+
+
+/*------------------------------------*\
+  $ Variables
+\*------------------------------------*/
+
+$linkColor: $brandBlue;
+$linkStateColor: $brandBlueDark;
+
+
+
+
+/*------------------------------------*\
+  $ Links
+\*------------------------------------*/
+
+a {
+	cursor: pointer;
+	@include link-colors($linkColor, $linkStateColor, $linkStateColor, $linkStateColor, $linkStateColor);
+  text-decoration: underline;
+  // Remove that annoying button highlight
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
+
+
+/*------------------------------------*\
+  $ Decoration
+\*------------------------------------*/
+
+.no-decoration,
+.no-decoration a {
+  text-decoration: none;
+  @include link-colors($textColor, $linkStateColor, $linkStateColor, $linkStateColor, $linkStateColor);
+}
+
+/* Hover */
+
+.no-decoration:hover,
+.no-decoration a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Disable
+\*------------------------------------*/
+
+.no-pointer-events {
+  pointer-events: none;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Media Queries
+\*------------------------------------*/
+
+/* >= 940px */
+
+@include min-screen($largeBreakPoint) {
+  
+  // Turn off tel links pointer events
+  a[href^="tel:"] {
+    pointer-events: none;
+  }
+
+}

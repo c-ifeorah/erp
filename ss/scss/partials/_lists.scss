@@ -1,0 +1,215 @@
+/*------------------------------------*\
+$$ Just Checking - Lists
+\*------------------------------------*/
+
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+  * Global Mixins
+Contents:
+  * Imports
+  * Default Lists
+  * No Styling
+  * Inline List
+  * Sortable Lists
+  * Encapsulated list
+  * Encapsulated Links
+*/
+
+
+
+
+/*------------------------------------*\
+  $ Imports
+\*------------------------------------*/
+
+@import "../modules/_mixins";
+@import "compass/css3/border-radius";
+@import "compass/css3/images";
+
+
+
+
+/*------------------------------------*\
+  $ Default Lists
+\*------------------------------------*/
+
+ul,
+ol {
+  line-height: 1.6;
+  margin-bottom: 17px;
+  list-style-position: inside;
+}
+
+ul li ul,
+ul li ol {
+  margin-left: 20px;
+  margin-bottom: 0;
+}
+
+ul.square,
+ul.circle,
+ul.disc {
+  margin-left: 17px
+}
+
+ul.square {
+  list-style-type: square;
+}
+
+ul.square li ul {
+  list-style: inherit;
+}
+
+ul.circle {
+  list-style-type: circle
+}
+
+ul.circle li ul {
+  list-style: inherit;
+}
+
+ul.disc {
+  list-style-type: disc;
+}
+
+ul.disc li ul {
+  list-style: inherit;
+}
+
+ul.no-bullet {
+  list-style: none;
+}
+
+
+
+
+/*------------------------------------*\
+  $ No Styling
+\*------------------------------------*/
+
+ul.no-list-styling {
+  list-style: none;
+  // margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+ol li ul,
+ol li ol {
+  margin-left: 20px;
+  margin-bottom: 0;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Inline List
+\*------------------------------------*/
+
+.inline-list,
+.inline-list > li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.inline-list > li {
+  display: inline-block;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Sortable Lists
+\*------------------------------------*/
+
+.sortable-list {
+  background: $grayLighter;
+  padding-left: 0;
+  margin-top: 0;
+  @include border($defaultBorderWidth, $defaultBorderStyle, $defaultBorderColor);
+}
+
+.sortable-list li {
+  cursor: move;
+  position: relative;
+  background-color: $grayFaint;
+  @include background-image(linear-gradient($white, $grayFaint));
+}
+
+.sortable-list li:last-child {
+  border: none;
+}
+
+.sortable-delete {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 44px;
+  height: 100%; 
+}
+
+
+
+
+/*------------------------------------*\
+  $ Encapsulated list
+\*------------------------------------*/
+
+.encapsulated-list {
+  padding: 0;
+  @include border($defaultBorderWidth, $defaultBorderStyle, $defaultBorderColor);
+  @include border-radius($defaultBorderRadius);
+  
+  > li,
+  .encapsulated-list-item {
+    @include clearfix();
+    padding: $defaultPadding/2 0;
+    border-bottom: $defaultBorderWidth $defaultBorderStyle $defaultBorderColor;
+    list-style: none;
+    margin: 0;
+  }
+
+  // No bottom border
+  > li:last-child,
+  .encapsulated-list-item:last-child,
+  .border-bottom:last-child {
+    border-bottom: none;
+  }
+}
+
+
+
+
+/*------------------------------------*\
+  $ Encapsulated Links
+\*------------------------------------*/
+
+.encapsulated-list-links {
+
+  > li,
+  .encapsulated-list-item {
+    cursor: pointer;
+    position: relative;
+  }
+
+  > li:hover,
+  .encapsulated-list-item:hover {
+    background-color: $grayFaint;
+  }
+  
+  // Navigate icon
+  i.icon-right-circle {
+    @include menu-navigate-icon();
+  }
+
+}

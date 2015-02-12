@@ -1,0 +1,56 @@
+/*------------------------------------*\
+  $$ Just Checking - Extend Bootstrap Popovers
+\*------------------------------------*/
+
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+  * Global Mixins
+Contents:
+  * Imports
+  * Popovers
+  * Title
+Notes:
+  * This extends the twitter bootstrap popovers feature
+*/
+
+
+
+
+/*------------------------------------*\
+  $ Imports
+\*------------------------------------*/
+
+@import "../../../modules/_mixins";
+@import "compass/css3/border-radius";
+
+
+
+
+/*------------------------------------*\
+  $ Popovers
+\*------------------------------------*/
+
+.popover {
+  @include border($defaultBorderWidth, $defaultBorderStyle, $defaultBorderColor);
+  @include border-radius($defaultBorderRadius);
+}
+
+
+
+
+/*------------------------------------*\
+  $ Title
+\*------------------------------------*/
+
+.popover-title {
+  background-color: $white;
+}
+
+.popover-title:before {
+  content: '\e84c'; // info circled
+  @include fontelloIcon();
+  margin-right: $defaultPadding/2;
+}

@@ -1,0 +1,125 @@
+/*------------------------------------*\
+  $$ Just Checking - Button Group
+\*------------------------------------*/
+
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+Contents:
+  * Imports
+ 	* Button Group
+ 		* First child
+ 		* Last child
+ 	* Button Group Condensed
+*/
+
+
+
+
+/*------------------------------------*\
+  $ Imports
+\*------------------------------------*/
+
+@import "../modules/_mixins";
+@import "compass/css3/border-radius";
+
+
+
+
+/*------------------------------------*\
+  $ Button Group
+\*------------------------------------*/
+
+.button-group {
+
+	> button,
+	> .pure-button,
+	> li > button {
+		@include border-radius(0);
+		border-left: none;
+	  padding-left: $defaultPadding; 
+	  padding-right: $defaultPadding;
+	  margin: 0;
+	  @include link-colors($textColor, $textColor, $textColor, $textColor, $textColor);
+	}
+
+	/* First child */
+
+	> button:first-child,
+	> .pure-button:first-child,
+	> li:first-child > button {
+		border-left: $defaultBorderWidth $defaultBorderStyle $defaultBorderColor;
+		border-top-left-radius: $defaultBorderRadius;
+		border-bottom-left-radius: $defaultBorderRadius;
+	}
+
+	/* Last child */
+
+	> button:last-child,
+	> .pure-button:last-child,
+	> li:last-child > button {
+		border-top-right-radius: $defaultBorderRadius;
+		border-bottom-right-radius: $defaultBorderRadius;
+	}
+
+	/* Labels */
+
+	// Correct pure form setting as hidden
+	label {
+		overflow: initial;
+	}
+
+	/* Inputs */
+
+	input[type="radio"],
+	input[type="checkbox"] {
+		@include invisible();
+	}
+
+}
+
+ul.button-group {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	min-height: 44px + 14px;
+
+	> li {
+		float: left;
+	}
+}
+
+
+
+
+/*------------------------------------*\
+  $ Button Group Condensed
+\*------------------------------------*/
+
+@for $i from 2 through 8 {
+
+	.button-group-condensed-#{$i} {
+
+		button {
+			min-width: percentage(1/$i);
+			width: percentage(1/$i);
+		}
+
+	}
+
+	ul.button-group-condensed-#{$i} {
+
+		> li {
+			min-width: percentage(1/$i);
+			width: percentage(1/$i);
+		}
+
+		button {
+			width: 100%;
+		}
+
+	}
+
+}

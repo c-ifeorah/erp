@@ -1,0 +1,320 @@
+/*------------------------------------*\
+  $$ Just Checking - Extend Pure Forms
+\*------------------------------------*/
+
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+  * Global Mixins
+Contents:
+ 	* Imports
+ 	* Form Elements
+ 	* Form Errors
+ 	* Disabled & Readonly Element
+ 	* Labels
+ 	* Media Queries
+ 		* <= 480px
+ 		* Webkit Browser Specific
+ 		* >= 768px
+Notes:
+  * This extends the purecss forms
+*/
+
+
+
+
+/*------------------------------------*\
+  $ Imports
+\*------------------------------------*/
+
+@import "../../modules/_mixins.scss";
+@import "compass/css3/border-radius";
+
+
+
+
+/*------------------------------------*\
+  $ Form Elements
+\*------------------------------------*/
+
+.pure-form-custom {
+	label,
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="tel"],
+	input[type="number"],
+	input[type="search"],
+	textarea,
+	select {
+		font-size: 1.4rem;
+		@include border-radius($defaultBorderRadius);
+		// Correct a typeahead issue
+		vertical-align: middle !important;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="tel"],
+	input[type="number"],
+	input[type="search"],
+	select {
+		height: 32px;
+	}
+
+	input.adjust-for-button,
+	select.adjust-for-button,
+	textarea.adjust-for-button {
+		width: 86%;
+	}
+
+	input.adjust-for-button + button,
+	select.adjust-for-button + button,
+	textarea.adjust-for-button + button {
+		width: 8%;
+		float: right;
+	}
+
+	label {
+		// margin: 2px 0;
+		// display: inline-block;
+		font-weight: 800;
+	}
+	
+	input[type="text"]:focus,
+	input[type="email"]:focus,
+	input[type="password"]:focus,
+	input[type="tel"]:focus,
+	input[type="number"]:focus,
+	input[type="search"]:focus,
+	textarea:focus,
+	select:focus {
+		border-color: $brandBlue;
+	}
+
+	fieldset {
+		// margin-top: $defaultMargin;
+	}
+
+	legend {
+		padding: 0;
+		font-weight: 800;
+		color: $brandBlue;
+		border-color: $defaultBorderColor;
+	}
+
+	textarea {
+		resize:none;
+	}
+
+	/* Errors */
+	.form-error {
+		background-color: $errorColor;
+		color: $white;
+		margin-top: 0;
+		padding: $defaultPadding/2;
+		@include border-radius($defaultBorderRadius);
+	}
+
+	.form-warning {
+		background-color: #C35817;
+		color: $white;
+		margin-top: 0;
+		padding: $defaultPadding/2;
+		@include border-radius($defaultBorderRadius);
+	}
+
+	.form-help {
+		background-color: $brandBlueLight;
+		color: $grayDark;
+		margin-top: 0;
+		padding: $defaultPadding/2;
+		@include border-radius($defaultBorderRadius);
+	}
+
+}
+
+
+
+
+/*------------------------------------*\
+  $ Form Errors
+\*------------------------------------*/
+
+.pure-form-custom {
+	
+	.error,
+	input[type="text"].error,
+	input[type="email"].error,
+	input[type="password"].error,
+	input[type="tel"].error,
+	input[type="number"].error,
+	textarea.error,
+	select.error {
+		border-color: $errorColor;
+	}
+
+	.error span,
+	span.error,
+	span.error-div,
+	span.error-select {
+	  display: block;
+	  padding: $defaultPadding/2 $defaultPadding;
+	  // margin-bottom: $defaultMargin;
+	  background: $errorColor;
+	  color: $white;
+	  @include border-radius($defaultBorderRadius);
+	}
+
+	/* Hide the select icon */
+
+	// select + .select-icon {
+	// 	display: none;
+	// }
+}
+
+
+
+/*------------------------------------*\
+  $ Disabled & Readonly Element
+\*------------------------------------*/
+
+.pure-form-custom {
+	
+	// Readonly inputs
+	input[readonly] {
+		background-color: $white;
+	}
+
+	// Style disabled select options
+	option:disabled {
+	  color: $grayDarker;
+	}
+}
+
+
+
+
+/*------------------------------------*\
+  $ Labels
+\*------------------------------------*/
+
+.pure-form-custom {
+
+	label,
+	.label {
+		@include trim-text();
+	}
+
+}
+
+
+
+
+// .pure-form-custom {
+
+// 	select {
+// 		// padding: $defaultPadding/1.7;
+// 		// background: none;
+// 		// -webkit-appearance: none;
+// 	}
+
+// 	// The replacement icon for combo boxes
+// 	// select + .select-icon {
+// 	// 	// display: inherit;
+// 	// 	// position: relative;
+// 	// 	// z-index: -1;
+// 	// 	// right: $defaultPadding/2;
+// 	// 	// top: -2.6rem;
+// 	// 	// right: .8rem;
+// 	// 	margin-top: -2.8rem;
+// 	// 	margin-right: $defaultMargin/2;
+// 	// 	float: right;
+// 	// }
+
+// }
+
+input.pure-input-1.margin-bottom {
+    border-style: none;
+    font-variant: normal;
+    font-style: normal;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+form.pure-form.pure-form-custom fieldset label {
+    color: #292c70;
+}
+
+
+/*------------------------------------*\
+  $ Media Queries
+\*------------------------------------*/
+
+/* <= 480px */
+
+// This will target anything less than iphone landscape
+@media only screen and (max-width: 480px) {
+
+	// Correct an additional margin added by pure
+	.pure-form-custom {
+		label,
+		input[type="text"],
+		input[type="email"],
+		input[type="password"],
+		input[type="tel"],
+		input[type="number"] {
+			margin-bottom: 0;
+		}
+	}
+
+}
+
+/* Webkit/iOS Specific */
+
+// This will target webkit browsers 
+// @media only screen 
+// and (-webkit-min-device-pixel-ratio: 1) 
+// and (max-device-width : 1024px) {
+
+// 	.pure-form-custom {
+
+// 		select {
+// 			padding: $defaultPadding/1.7;
+// 			background: none;
+// 			-webkit-appearance: none;
+// 		}
+
+// 		// The replacement icon for combo boxes
+// 		select + .select-icon {
+// 			display: inherit;
+// 			position: relative;
+// 			z-index: -1;
+// 			right: $defaultPadding/2;
+// 			top: -2.6rem;
+// 			right: .8rem;
+// 			float: right;
+// 		}
+
+// 	}
+
+// }
+
+/* >= 768px */
+
+/* This will target anything greater than ipad portrait */
+// @media only screen and (min-width: 768px) {
+
+// 	.pure-form-custom {
+
+// 		// Clicking the icon will show the dropdown list
+// 		.select-icon {
+// 			z-index: -1;
+// 		}
+
+// 	}
+
+// }

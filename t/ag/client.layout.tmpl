@@ -1,0 +1,22 @@
+<!-- system.client.layout.tmpl -->
+<form class="pure-form pure-form-custom">
+  <p id="client-error" class="hide form-error text-red"></p>
+  <div id="client-delete" class="hide form-warning">
+    <div id="client-delete-info"></div>
+    <div style="overflow:hidden">
+      <button id="client-confirm-delete" class="pure-button pure-button-custom button-small margin-left right" title="Ok"> <i class="icon-fa-check"></i>  <label>OK</label></button>
+      <button id="client-cancel-delete" class="pure-button pure-button-custom button-small margin-left right" title="Cancel"> <i class="icon-fa-times"></i>  <label>Cancel</label></button>
+    </div>
+  </div>
+</form>
+
+<div class="tabbable">
+  <ul id="client-tabs" class="nav nav-tabs no-margin no-decoration">
+    <li class="active"><a href="#tab1" data-toggle="tab">Details</a></li>
+  </ul>
+  <div class="tab-content">
+		<div class="tab-pane active" id="tab1">
+	  	<div id="client-form"></div>
+  	</div>
+  </div>
+</div>

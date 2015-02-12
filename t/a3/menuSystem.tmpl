@@ -1,0 +1,130 @@
+<!--div class="row menu light-background">
+
+	<div class="column large-2 medium-4 small-5">
+		<img src="imgs/system/corso-logo.jpg" alt="" width="108" height="38" class="half-margin-top">
+	</div>
+	<div class="column large-10 medium-8 small-7 no-decoration half-margin-top">
+		<nav class="no-decoration">
+			<form class="pure-form pure-form-custom button-group show-for-medium-down right">
+				<button class="pure-button pure-button-custom button-small"><i class="icon-search"></i></button>
+				<button class="pure-button pure-button-custom button-small"><i class="icon-text-height"></i></button>
+				<button class="pure-button pure-button-custom button-small"><i class="icon-user"></i></button>
+			</form>
+			<ul class="no-list-styling inline-list show-for-large-up">
+				<li class="right">
+					<form class="pure-form pure-form-custom">
+					    <input type="search" placeholder="Search...">
+					    <button type="submit" class="pure-button pure-button-custom button-small">
+					    	<i class="icon-search"></i>
+					    </button>
+					</form>
+				</li>
+				</!--li class="margin-right right">
+					<form class="pure-form pure-form-custom">
+				    <select name="" id="" class="full-width left">
+				    	<option>Font size</option>
+				    	<option disabled>-----------</option>
+				    	<option value="">Small</option>
+				    	<option value="">Medium</option>
+				    	<option value="">Large</option>
+				    </select>
+					</form>
+				</li--/>
+			</ul>
+		</nav>
+	</div>
+</div-->
+<!-- Flexnav -->
+<div class="row purple-gradient">
+	<div class="column large-12 no-padding">
+		<nav>
+			<ul id="main-menu" class="slimmenu">
+				<li class="no-border">
+					<a href="#ax/as" class="icon-fa-dashboard"></a>
+				</li>
+				<li>
+					<a class="no-padding-right icon-fa-cogs" > System</a>
+					<ul role="menu" aria-labelledby="drop-systems">
+						<li><a href="#a1" title="Manage Admin" class="icon-fa-graduation-cap"> Admin</a></li>
+						<li><a href="#ag" title="Manage Clients" class="icon-fa-tree"> Clients</a></li>
+						<li><a href="#aa" title="MetaConcepts" class="icon-fa-list-alt"> Metatypes</a></li>
+						<li><a href="#al" title="Meta Comparisons" class= "icon-fa-arrows-h"> Meta Comparisons</a></li>
+						<li><a href="#aw" title="MetaJourneys" class="icon-fa-road"> Meta Journeys</a></li>
+						<li><a href="#ah" title="Scorecard" class="icon-fa-sliders"> Scorecards</a></li>
+						<li><a href="#ad" title="SPP Modules" class="icon-fa-cube"> Modules</a></li>
+						<li><a href="#ac" title="SPP Packages" class="icon-fa-cube"> Packages</a></li>
+						<!--li><a href="#ad" title="SPP Modules>Modules</a></li-->
+						<li><a href="#ae" title="License Purchase" class="icon-fa-money"> Licenses</a></li>
+					</ul>
+				</li>
+				<li>
+					<a class="no-padding-right icon-fa-cog"> Administration</a>
+					<ul role="menu" aria-labelledby="drop-systems">
+						<li><a href="#as" title="Campaigns" class="icon-fa-bullhorn"> Campaigns</a></li>
+						<li><a href="#ab" title="Groups / Divisions / Departments" class="icon-fa-university"> Communities</a></li>
+						<li><a href="#ak" title="Comparisons" class="icon-fa-random"> Comparisons</a></li>
+						<li><a href="#ay" title="Journeys" class="icon-fa-compass"> Journeys</a></li>
+						<li><a href="#av" title="Concepts Authorization" class="icon-fa-check"> Concepts Auth</a></li>
+						<li><a href="#aj" title="Add users to SPP" class="icon-fa-users"> Users</a></li>
+						<li><a href="#af" title="User Privileges" class="icon-fa-certificate"> User Privileges</a></li>
+						<!--li><a href="#ap/9" title="Sample PWC only for demo">Demo PWC</a></li-->
+					</ul>
+				</li>
+				<li>
+					<a class="no-padding-right border-right icon-fa-circle-o-notch"> View</a>
+					<ul role="menu" aria-labelledby="drop-view">
+						<li><a href="#ar" title="Concepts" class="icon-plus-circled"> Concepts</a></li>
+						<li><a href="#ao" title="Journey Boards" class="icon-fa-trello"> Journey Boards</a></li>
+					</ul>
+				</li>
+				<li class="right shows-for-large-up">
+					<a href="#" id="drop-account" class="no-padding-right icon-fa-user">
+						<!--  <%= nameFirst %> <%= nameLast %>  --> 
+					</a>
+					<ul class="right-menu" role="menu" aria-labelledby="drop-account">
+						<li><a href="#aj/<%= idUser %>" title="My Profile" class="icon-edit"> My Profile</a></li>
+						<li><a href="#az" title="My Projects" class="icon-fa-cubes"> My Projects</a></li>
+						<li><a href="#au" title="Task Manager" class="icon-fa-tasks"> My Tasks</a></li>
+						<li><a href="http://corsospp.helpdocsonline.com" title="Help" class="icon-help" target="_blank"> Help</a></li>
+						<li><a href="#" id="menu-logout" title="Logout" class="icon-logout"> Logout</a></li>
+					</ul>
+				</li>
+				<li class="right">
+					<a href="#ar" class="no-padding-right border-right icon-plus"></a>
+					<ul class="right-menu" role="menu" aria-labelledby="drop-systems">
+						<li><a href="#ar/add/Idea" title="Idea" class="icon-corso-idea"> Idea</a></li>
+						<li><a href="#ar/add/Requirement" title="Requirement" class="icon-corso-requirement"> Requirement</a>
+							<ul>
+								<li><a href="#ar/add/Constraint" title="Constraint" class="icon-corso-constraint"> Constraint</a></li>
+							</ul>
+						</li>
+						<li><a href="#ar/add/Goal" title="Goal" class="icon-corso-goal"> Goal</a>
+							<ul>
+								<li ><a href="#ar/add/Assessment" title="Assessment" class="icon-corso-assessment"> Assessment</a></li>
+								<li><a href="#ar/add/Driver" title="Driver" class="icon-corso-driver"> Driver</a></li>
+								<li><a href="#ar/add/Principle" title="Principle" class="icon-corso-principle"> Principle</a></li>
+								<li><a href="#ar/add/Value" title="Value" class="icon-corso-value"> Value</a></li>
+							</ul>
+						</li>
+						<li><a href="#ar/add/Stakeholder" title="Stakeholder" class="icon-corso-requirement"> Stakeholder</a>
+							<ul>
+								<li><a href="#ar/add/Competency" title="Competency" class="icon-corso-competency"> Competency</a></li>
+								<li><a href="#ar/add/Actor" title="Actor" class="icon-corso-actor"> Actor</a></li>
+							</ul>
+						</li>
+						<li><a href="#ar/add/Feature" title="Feature" class="icon-corso-feature"> Feature</a></li>
+					</ul>
+				</li>
+			
+				<!--li>
+					<a class="no-padding-right border-right">Platform</a>
+					<ul role="menu" aria-labelledby="drop-systems">
+				    	<li><a href="#">Go here</a></li>
+						<li><a href="#">Go there</a></li>
+						<li><a href="#">Go everywhere</a></li>
+				  	</ul>
+				</li-->
+			</ul>
+		</nav>
+	</div>
+</div>

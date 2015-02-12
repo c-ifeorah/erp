@@ -1,0 +1,767 @@
+/*------------------------------------*\
+	$$ Just Checking - Utilities
+\*------------------------------------*/
+
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+  * Global Mixins
+Contents:
+  * Imports
+  * Clearfix
+ 	* Helper classes
+ 		* Visibility
+ 		* Floaters
+ 		* Readable Widths
+ 		* Pointer Events
+ 	* Padding
+ 		* Remove Padding
+ 		* Add Padding
+ 		* Extra Padding
+ 		* IE8 Support
+ 	* Margins
+ 		* Remove Margin
+ 		* Add Margin
+ 		* Extra Margin
+ 		* Half Margin
+ 	* Text
+ 		* Indent
+ 		* Text alignment
+ 		* Text overflow
+ 		* Input text
+ 	* Backgrounds
+ 		* Hover
+ 		* No background
+ 	* Borders
+ 		* No Border
+ 		* Border radius
+ 	* Links
+ 		* No decoration
+ 	* Lists
+ 	* Positioning
+ 		* Relative
+ 		* Absolute
+ 	* Display
+ 		* Block
+ 		* Inline block
+ 		* Inline
+ 	* Cursors
+ 		* Move
+ 		* Pointer
+ 		* Auto
+ 	* Status
+ 		* Disabled
+ 	* Remove Styles
+ 	* Widths
+ 		* 100%
+ 		* 66%
+ 		* 50%
+ 		* 45%
+ 		* 33%
+ 	* Opacity
+ 	* Media Queries
+ 		* <= 767px
+ 			* Visibility
+ 			* Padding
+ 			* Margin
+ 			* Text Alignment
+ 			* Borders
+ 		* >= 768px
+ 			* Readable Widths
+ 			* Padding
+*/
+
+
+
+
+/*------------------------------------*\
+  $ Imports
+\*------------------------------------*/
+
+@import "../modules/_mixins";
+@import "compass/css3/border-radius";
+
+
+
+
+/*------------------------------------*\
+  $ Clearfix
+\*------------------------------------*/
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Helper classes
+\*------------------------------------*/
+
+/* Visibility */
+
+.hide {
+	display: none ;
+}
+
+.hide-notimportnant {
+	display: none !important;
+}
+
+.invisible {
+	@include invisible();
+}
+
+/* Floaters */
+
+.right,
+.always-right {
+	float: right;
+}
+
+.left,
+.always-left {
+	float: left;
+}
+
+/* Readable Widths */
+
+// In media queries but also needed in IE8 as well
+.lt-ie9 .readable-width {
+	max-width: 42em;
+}
+
+/* Pointer Events */
+
+// Stop an element being clickable
+.no-click {
+	pointer-events: none;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Padding
+\*------------------------------------*/
+
+/* Remove Padding */
+
+.no-padding {
+	padding: 0 !important;
+}
+
+.no-padding-left {
+	padding-left: 0 !important;
+}
+
+.no-padding-right {
+	padding-right: 0 !important;
+}
+
+.no-padding-top {
+	padding-top: 0 !important;
+}
+
+.no-padding-bottom {
+	padding-bottom: 0 !important;
+}
+
+/* Add Padding */
+
+.padding {
+	padding: $defaultPadding !important;
+}
+
+.padding-left,
+input.padding-left {
+	padding-left: $defaultPadding !important;
+}
+
+.padding-right {
+	padding-right: $defaultPadding !important;
+}
+
+.padding-top {
+	padding-top: $defaultPadding !important;
+}
+
+.padding-bottom {
+	padding-bottom: $defaultPadding !important;
+}
+
+/* Half padding */
+
+.half-padding {
+	padding: $defaultPadding/2 !important;
+}
+
+/* Extra Padding */
+
+.extra-padding {
+	padding: $defaultPadding*2 !important;
+}
+
+.extra-padding-right {
+	padding-right: $defaultPadding*2 !important;
+}
+
+.extra-padding-left,
+input.extra-padding-left {
+	padding-left: $defaultPadding*2 !important;
+}
+
+.extra-padding-bottom {
+	padding-bottom: $defaultPadding*2 !important;
+}
+
+/* IE8 Support */
+
+.lt-ie9 .extra-padding-top {
+	padding-top: $defaultPadding*3.8 !important;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Margin
+\*------------------------------------*/
+
+/* Remove Margin */
+
+.no-margin {
+	margin: 0 !important;
+}
+
+.no-margin-left {
+	margin-left: 0 !important;
+}
+
+.no-margin-right {
+	margin-right: 0 !important;
+}
+
+.no-margin-top {
+	margin-top: 0 !important;
+}
+
+.no-margin-bottom {
+	margin-bottom: 0 !important;
+}
+
+/* Add Margin */
+
+.margin {
+	margin: $defaultMargin !important;
+}
+
+.margin-left {
+	margin-left: $defaultMargin !important;
+}
+
+.margin-right {
+	margin-right: $defaultMargin !important;
+}
+
+.margin-top {
+	margin-top: $defaultMargin !important;
+}
+
+.margin-bottom {
+	margin-bottom: $defaultMargin !important;
+}
+
+/* Extra Margin */
+
+.extra-margin {
+	margin: $defaultMargin*2 !important;
+}
+
+.extra-margin-left {
+	margin-left: $defaultMargin*2 !important;
+}
+
+.extra-margin-right {
+	margin-right: $defaultMargin*2 !important;
+}
+
+.extra-margin-top {
+	margin-top: $defaultMargin*2 !important;
+}
+
+.extra-margin-bottom {
+	margin-bottom: $defaultMargin*2 !important;
+}
+
+/* Half Margin */
+
+.half-margin {
+	margin: $defaultMargin/2 !important;
+}
+
+.half-margin-left {
+	margin-left: $defaultMargin/2 !important;
+}
+
+.half-margin-right {
+	margin-right: $defaultMargin/2 !important;
+}
+
+.half-margin-top {
+	margin-top: $defaultMargin/2 !important;
+}
+
+.half-margin-bottom {
+	margin-bottom: $defaultMargin/2 !important;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Text
+\*------------------------------------*/
+
+/* Indent */
+
+.indented-text {
+	text-indent: -999em;
+}
+
+/* Text alignment */
+
+.centered-text {
+	text-align: center !important;
+}
+
+.right-text {
+	text-align: right !important;
+}
+
+.left-text {
+	text-align: left !important;
+}
+
+/* Text overflow */
+
+.text-trim {
+	@include trim-text();
+}
+
+/* Input text */
+
+.inline-input-text {
+	line-height: 2.5;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Backgrounds
+\*------------------------------------*/
+
+.textured-background {
+	@include textured-white();
+}
+
+.page-background {
+	background: $grayFaint;
+}
+
+.light-background {
+	background: $white;
+}
+
+.dark-background {
+	background: $grayDark;
+}
+
+/* Hover */
+
+.hover-gray-background:hover {
+	background: $grayFaint;
+}
+
+/* No background */
+
+.no-background {
+	background: none;
+}
+
+/* Gradients */
+
+.light-gradient {
+	@include background-image(linear-gradient($white, $grayFaint));
+}
+
+.purple-gradient {
+	// @include background-image(linear-gradient($brandBlue, $brandBlueDark));
+	background-color: $brandBlue;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Borders
+\*------------------------------------*/
+
+.border {
+	@include border($defaultBorderWidth, $defaultBorderStyle, $defaultBorderColor);
+}
+
+.border-top {
+	@include border-top($defaultBorderWidth, $defaultBorderStyle, $defaultBorderColor);
+}
+
+.border-right {
+	@include border-right($defaultBorderWidth, $defaultBorderStyle, $defaultBorderColor);
+}
+
+.border-bottom {
+	@include border-bottom($defaultBorderWidth, $defaultBorderStyle, $defaultBorderColor);
+}
+
+.border-left {
+	@include border-left($defaultBorderWidth, $defaultBorderStyle, $defaultBorderColor);
+}
+
+/* No Border */
+
+.no-border {
+	border-top: none !important;
+	border-right: none !important;
+	border-bottom: none !important;
+	border-left: none !important;
+}
+
+.no-border-top {
+	border-top: none !important;
+}
+
+.no-border-right {
+	border-right: none !important;
+}
+
+.no-border-bottom {
+	border-bottom: none !important;
+}
+
+.no-border-left {
+	border-left: none !important;
+}
+
+/* Border radius */
+
+.border-radius {
+	@include border-radius($defaultBorderRadius);
+}
+
+
+
+
+/*------------------------------------*\
+  $ Positioning
+\*------------------------------------*/
+
+/* Relative */
+
+.relative {
+	position: relative;
+}
+
+/* Absolute */
+
+.absolute {
+	position: absolute;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Display
+\*------------------------------------*/
+
+/* Block */
+
+.block {
+	display: block;
+}
+
+/* Inline block */
+
+.inline-block {
+	display: inline-block !important;
+}
+
+/* Inline */
+
+.inline {
+	display: inline !important;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Cursors
+\*------------------------------------*/
+
+/* Move */
+
+.cursor-move,
+.cursor-move:hover {
+	cursor: move;
+}
+
+/* Pointer */
+
+.cursor-pointer,
+.cursor-pointer:hover {
+	cursor: pointer;
+}
+
+/* Auto */
+
+.cursor-auto,
+.cursor-auto:hover {
+	cursor: auto !important;
+}
+
+
+
+/*------------------------------------*\
+  $ Status
+\*------------------------------------*/
+
+/* Disabled */
+
+.disable {
+	@include overlay($white, 0.5, absolute, 1);
+}
+
+
+
+
+/*------------------------------------*\
+  $ Remove Styles
+\*------------------------------------*/
+
+.remove-styles,
+.remove-styles:active,
+.remove-styles:hover,
+.remove-styles:focus {
+	background: none;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Widths
+\*------------------------------------*/
+
+/* 100% */
+
+.auto-width {
+	width: auto !important;
+}
+
+/* 90% */
+
+.nine-tenths-width {
+	width: 90% !important;
+}
+
+/* 100% */
+
+.full-width {
+	width: 100% !important;
+}
+
+/* 80% */
+
+.eight-tenths-width {
+	width: 80% !important;
+}
+
+/* 75% */
+
+.three-fourths-width {
+	width: 75% !important;
+}
+
+/* 66% */
+
+.two-thirds-width {
+	width: 66% !important;
+}
+
+/* 50% */
+
+.half-width {
+	width: 50% !important; 
+}
+
+/* 45% */
+
+.half-width-margin {
+	width: 45% !important;
+}
+
+/* 33% */
+
+.third-width {
+	width: 33% !important;
+}
+
+/* 33% */
+
+.quarter-width {
+	width: 25% !important;
+}
+
+
+
+
+
+/*------------------------------------*\
+  $ Opacity
+\*------------------------------------*/
+
+[data-wrapper].overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	/* z-index: 1000; */
+	background-color: white;
+	width: 100%;
+	height: 100%;
+}
+
+[data-wrapper].opacity {
+	opacity: 0.5;
+}
+
+.half-opacity {
+	opacity: 0.5;
+}
+
+.zero-opacity {
+  // -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Sections
+\*------------------------------------*/
+
+.section-container {
+	// @include box-shadow(0 1px 1px $grayLight);
+	@include border($defaultBorderWidth, $defaultBorderStyle, $defaultBorderColor);
+	@include border-radius($defaultBorderRadius);
+	padding: $defaultPadding;
+	@include clearfix();
+}
+
+
+
+
+/*------------------------------------*\
+  $ Media Queries
+\*------------------------------------*/
+
+/* <= 767px */
+
+// This will target anything less than ipad portrait
+@media only screen and (max-width: 767px) {
+
+	/* Visibility */
+
+  .mobile-invisible {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+
+  /* Padding */
+
+  .mobile-padding-top {
+    padding-top: $defaultPadding;
+  }
+
+  /* Margin */
+
+  .mobile-margin-left {
+    margin-left: $defaultMargin;
+  }
+
+  .mobile-margin-top {
+    margin-top: $defaultMargin;
+  }
+
+  /* Text Alignment */
+
+  .mobile-left-text {
+    text-align: left;
+  }
+
+  /* Borders */
+
+	.mobile-no-border {
+		border-top: none;
+		border-right: none;
+		border-bottom: none;
+		border-left: none;
+	}
+
+	.mobile-border-bottom {
+		@include border-bottom($defaultBorderWidth, $defaultBorderStyle, $defaultBorderColor);
+	}
+
+}
+
+/* >= 768px */
+
+// This will target anything wider than ipad portrait
+@media only screen and (min-width: 768px) {
+
+	/* Readable Widths */
+
+	.readable-width {
+		max-width: 42em;
+	}
+
+	/* Padding */
+
+  // Required for the fixed positioned top bar and menu panel
+  .extra-padding-top {
+		padding-top: $defaultPadding*3.8;
+	}
+
+}

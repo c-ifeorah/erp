@@ -1,0 +1,151 @@
+/*------------------------------------*\
+	$$ Just Checking - Panels
+\*------------------------------------*/
+
+/*
+Requires:
+  * SASS
+  * Global Variables 
+  * Global Mixins
+Contents:
+  * Imports
+  * Media Queries
+    * <= 767px
+      * Page wrapper animation classes
+      * Page wrapper keyframes
+    * >= 768px
+    * >= 940px
+    * >= 1440px
+*/
+
+
+
+
+/*------------------------------------*\
+  $ Imports
+\*------------------------------------*/
+
+@import "../modules/_mixins";
+
+
+
+
+/*------------------------------------*\
+  $ Left-Hand Panel
+\*------------------------------------*/
+
+/* Page wrapper animation classes */
+
+// In from the left
+.page-wrapper-left-in {
+  @include animation(slidePageLeftIn, 0.4s, 0, ease, 1);
+  left: $smallPanelWidth;
+  position: fixed;
+  z-index: 3;
+
+  .page-inner {
+    // Stop the content scrolling when open
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+  }
+}
+
+// Out to the left
+.page-wrapper-left-out {
+  @include animation(slidePageLeftOut, 0.4s, 0, ease, 1);
+  left: 0;
+  position: fixed;    
+}
+
+/* Page wrapper keyframes */
+  
+// In from the left
+@include keyframes(slidePageLeftIn) {
+  from { left: 0; }
+  to { left: $smallPanelWidth; }
+}
+
+// Out to the left
+@include keyframes(slidePageLeftOut) {
+  from { left: $smallPanelWidth; }
+  to { left: 0; }
+}
+
+
+
+
+/*------------------------------------*\
+  $ Media Queries
+\*------------------------------------*/
+
+/* <= 767px */
+
+// This will target anything smaller than our medium breakpoint
+@media only screen and (max-width: $largeBreakPoint) {
+
+  /* Page wrapper animation classes */
+
+  // In from the right
+  .page-wrapper-right-in,
+  .page-wrapper-right-in .top-menu {
+    @include animation(slidePageRightIn, 0.4s, 0, ease, 1);
+    left: -$smallPanelWidth;
+    position: fixed;
+    z-index: 3;
+
+    .page-inner {
+      // Stop the content scrolling when open
+      -webkit-user-select: none;
+      -webkit-user-drag: none;
+    }
+  }
+  
+  // Out to the right
+  .page-wrapper-right-out,
+  .page-wrapper-right-out .top-menu {
+    @include animation(slidePageRightOut, 0.4s, 0, ease, 1);
+    left: 0;
+    position: fixed;
+  }
+
+  /* Page wrapper keyframes */
+
+  // In from the right
+  @include keyframes(slidePageRightIn) {
+    from { left: 0; }
+    to { left: -$smallPanelWidth; }
+  }
+
+  // Out to the right
+  @include keyframes(slidePageRightOut) {
+    from { left: -$smallPanelWidth; }
+    to { left: 0; }
+  }
+
+}
+
+/* >= 940px */
+
+// This will target anything bigger than our large breakpoint
+@media only screen and (min-width: $largeBreakPoint) {
+
+  // Set vertical panel width
+  .panel-vertical {
+    width: 80%;
+    left: 10%;
+  }
+
+}
+
+/* >= 1440px */
+
+// This will target anything bigger than our vast breakpoint
+@media only screen and (min-width: $vastBreakPoint) {
+
+  // Set vertical panel width
+  .panel-vertical {
+    width: 60%;
+    left: 20%;
+  }
+
+}

@@ -1,0 +1,138 @@
+/*------------------------------------*\
+  $$ Just Checking - Menu
+\*------------------------------------*/
+
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+Contents:
+  * Imports
+  * Menu
+  * Vertical Menu List
+  * Media Queries
+    * >= 940px
+*/
+
+
+
+
+/*------------------------------------*\
+  $ Imports
+\*------------------------------------*/
+
+@import "../modules/_mixins";
+@import "../modules/_media-queries";
+
+
+
+
+/*------------------------------------*\
+  $ Menu
+\*------------------------------------*/
+
+.menu {
+	// min-height: 52px;
+	// padding: 4px 0;
+	// @include border($defaultBorderWidth, $defaultBorderStyle, $defaultBorderColor);
+  // background-color: $white;
+  // @include border-radius($defaultBorderRadius);
+  // @include lightGradient();
+
+  /* Links */
+  
+  a {
+    @include touchLink();
+	  color: $textColor;
+	  padding: 0 $defaultPadding;
+	  border-left: $defaultBorderWidth $defaultBorderStyle $defaultBorderColor;
+
+    &:hover {
+      color: $textColor;
+      text-decoration: none;
+    }
+	}
+
+}
+
+.menu-reversed {
+  a {
+    @include link-colors($white, $white, $white, $white, $white);
+    border-left: $defaultBorderWidth $defaultBorderStyle darken($brandBlueDark, 10%);
+  }
+
+  // Bootstrap specific
+  .dropdown-menu {
+    background-color: $brandBlueDark;
+    border: none;
+
+    li a {
+      @include link-colors($white, $white, $white, $white, $white);
+      &:hover {
+        background-color: $brandBlue;
+      }
+    }
+  }
+}
+
+
+
+
+/*------------------------------------*\
+  $ Vertical Menu List
+\*------------------------------------*/
+
+.vertical-menu-list {
+
+  > li:first-child {
+    border-top: $defaultBorderWidth $defaultBorderStyle $defaultBorderColor;
+  }
+
+  > li {
+    border-bottom: $defaultBorderWidth $defaultBorderStyle $defaultBorderColor;
+
+    a {
+      color: $textColor;
+      width: 100%;
+      line-height: 4.4rem;
+      display: block;
+    }
+
+    i.icon-right-open {
+      float: right;
+    }
+
+    i {
+      line-height: 4.4rem;
+    }
+  }
+
+}
+
+
+
+
+/*------------------------------------*\
+  $ Media Queries
+\*------------------------------------*/
+
+/* >= 940px */
+
+@include min-screen($largeBreakPoint) {
+
+  /* Menu */
+
+  .menu {
+    padding: $defaultPadding/2 0;
+
+    /* Links */
+    
+    a {
+      height: 30px;
+      line-height: 30px;
+    }
+
+  }
+
+}

@@ -1,0 +1,237 @@
+/*------------------------------------*\
+  $$ Just Checking - Extend Pure Base
+\*------------------------------------*/
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+  * Global Mixins
+Contents:
+  * Imports
+  * Submit
+  * Default
+  * Position
+  * Icons
+  * Inline Button
+  * Button Sizes
+Notes:
+  * This extends the purecss buttons
+*/
+/*------------------------------------*\ 
+  $ Imports
+\*------------------------------------*/
+/*------------------------------------*\
+  $$ Just Checking - Global Mixins
+\*------------------------------------*/
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+Contents:
+  * Imports
+  * Utility
+    * Clearfix
+    * Reset Margin & Padding
+  * Borders
+  * Backgrounds
+  * Gradients
+  * Menus
+  * Buttons
+    * Default button
+    * Submit button
+  * Overlay
+  * Text Trim
+  * Scroll
+  * Links
+  * Icons
+  * Animations
+  * Visibility
+*/
+/*------------------------------------*\ 
+  $ Imports
+\*------------------------------------*/
+/*------------------------------------*\
+  $$ Just Checking - Global Variables
+\*------------------------------------*/
+/*
+Requires:
+  * SASS
+Contents:
+  * Colours
+    * Brand colours 
+    * Button & alert colours
+    * Background colours
+  * Scaffolding
+    * Max & Min Widths
+    * Default Breakpoints
+  * Forms
+  * Buttons
+    * Colours
+    * Sizes
+  * Margin & Padding
+  * Typography
+    * Font Family
+    * Text Colour
+    * Text size
+    * Text weight
+  * Borders
+  * Dimensions
+  * Shadows
+  * Tables
+  * Breakpoints
+*/
+/*------------------------------------*\
+  $ Colours
+\*------------------------------------*/
+/*
+1. White
+* FFFFFF
+
+2. The 3 Greys
+* F8F8F8   (Light)
+* CCCCCC (Mid)
+* 666666   (Dark)
+
+3. The 3 Blues
+* DDE1EC (Light)
+* 00528D  (Mid)
+* 001D47  (Dark)
+*/
+/* Brand colours */
+/* Button & alert colours */
+/* Background colours */
+/*------------------------------------*\
+  $ Scaffolding
+\*------------------------------------*/
+/* Max & Min Widths */
+/* Default Breakpoints */
+/*------------------------------------*\
+  $ Forms
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Buttons
+\*------------------------------------*/
+/* Colours */
+/* Sizes */
+/*------------------------------------*\
+  $ Margin & Padding
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Typography
+\*------------------------------------*/
+/* Font Family */
+/* Text Colour */
+/* Text size */
+/* Text weight */
+/*------------------------------------*\
+  $ Borders
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Dimensions
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Shadows
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Tables
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Breakpoints
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Utility
+\*------------------------------------*/
+/* Clearfix */
+/* Reset Margin & Padding */
+/*------------------------------------*\
+  $ Borders
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Backgrounds
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Gradients
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Menus
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Buttons
+\*------------------------------------*/
+/* Default button */
+/* Submit button */
+/*------------------------------------*\
+  $ Overlay
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Text Trim
+\*------------------------------------*/
+/*
+Requires:
+  * This requires a container with a set width
+*/
+/*------------------------------------*\
+  $ Scroll
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Links
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Icons
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Animations
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Visibility
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Definition List
+\*------------------------------------*/
+/* line 41, ../../../scss/extend/pure/extend.pure.base.scss */
+.definition-list-inline {
+  border-top: 1px solid #cccccc;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 45, ../../../scss/extend/pure/extend.pure.base.scss */
+.definition-list-inline dt,
+.definition-list-inline dd {
+  border: 1px solid #cccccc;
+  border-top: none;
+  padding: 0.5em 0.71429em;
+}
+/* line 50, ../../../scss/extend/pure/extend.pure.base.scss */
+.definition-list-inline dt {
+  width: 20%;
+  background-color: #00528d;
+  font-weight: 800;
+  float: left;
+  border-right: none;
+  color: white;
+}
+/* line 58, ../../../scss/extend/pure/extend.pure.base.scss */
+.definition-list-inline dd {
+  width: 80%;
+  float: right;
+  margin-bottom: 0;
+}
+
+/* line 67, ../../../scss/extend/pure/extend.pure.base.scss */
+dd {
+  margin: 0 0 1em;
+}
+
+/*------------------------------------*\
+  $ Grid changes
+\*------------------------------------*/
+/* line 80, ../../../scss/extend/pure/extend.pure.base.scss */
+.large-4 .definition-list-inline dt {
+  width: 40%;
+}
+/* line 83, ../../../scss/extend/pure/extend.pure.base.scss */
+.large-4 .definition-list-inline dd {
+  width: 60%;
+}

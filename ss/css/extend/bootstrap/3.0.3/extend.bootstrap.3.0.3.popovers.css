@@ -1,0 +1,217 @@
+/*------------------------------------*\
+  $$ Just Checking - Extend Bootstrap Popovers
+\*------------------------------------*/
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+  * Global Mixins
+Contents:
+  * Imports
+  * Popovers
+  * Title
+Notes:
+  * This extends the twitter bootstrap popovers feature
+*/
+/*------------------------------------*\
+  $ Imports
+\*------------------------------------*/
+/*------------------------------------*\
+  $$ Just Checking - Global Mixins
+\*------------------------------------*/
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+Contents:
+  * Imports
+  * Utility
+    * Clearfix
+    * Reset Margin & Padding
+  * Borders
+  * Backgrounds
+  * Gradients
+  * Menus
+  * Buttons
+    * Default button
+    * Submit button
+  * Overlay
+  * Text Trim
+  * Scroll
+  * Links
+  * Icons
+  * Animations
+  * Visibility
+*/
+/*------------------------------------*\ 
+  $ Imports
+\*------------------------------------*/
+/*------------------------------------*\
+  $$ Just Checking - Global Variables
+\*------------------------------------*/
+/*
+Requires:
+  * SASS
+Contents:
+  * Colours
+    * Brand colours 
+    * Button & alert colours
+    * Background colours
+  * Scaffolding
+    * Max & Min Widths
+    * Default Breakpoints
+  * Forms
+  * Buttons
+    * Colours
+    * Sizes
+  * Margin & Padding
+  * Typography
+    * Font Family
+    * Text Colour
+    * Text size
+    * Text weight
+  * Borders
+  * Dimensions
+  * Shadows
+  * Tables
+  * Breakpoints
+*/
+/*------------------------------------*\
+  $ Colours
+\*------------------------------------*/
+/*
+1. White
+* FFFFFF
+
+2. The 3 Greys
+* F8F8F8   (Light)
+* CCCCCC (Mid)
+* 666666   (Dark)
+
+3. The 3 Blues
+* DDE1EC (Light)
+* 00528D  (Mid)
+* 001D47  (Dark)
+*/
+/* Brand colours */
+/* Button & alert colours */
+/* Background colours */
+/*------------------------------------*\
+  $ Scaffolding
+\*------------------------------------*/
+/* Max & Min Widths */
+/* Default Breakpoints */
+/*------------------------------------*\
+  $ Forms
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Buttons
+\*------------------------------------*/
+/* Colours */
+/* Sizes */
+/*------------------------------------*\
+  $ Margin & Padding
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Typography
+\*------------------------------------*/
+/* Font Family */
+/* Text Colour */
+/* Text size */
+/* Text weight */
+/*------------------------------------*\
+  $ Borders
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Dimensions
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Shadows
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Tables
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Breakpoints
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Utility
+\*------------------------------------*/
+/* Clearfix */
+/* Reset Margin & Padding */
+/*------------------------------------*\
+  $ Borders
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Backgrounds
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Gradients
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Menus
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Buttons
+\*------------------------------------*/
+/* Default button */
+/* Submit button */
+/*------------------------------------*\
+  $ Overlay
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Text Trim
+\*------------------------------------*/
+/*
+Requires:
+  * This requires a container with a set width
+*/
+/*------------------------------------*\
+  $ Scroll
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Links
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Icons
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Animations
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Visibility
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Popovers
+\*------------------------------------*/
+/* line 38, ../../../../scss/extend/bootstrap/3.0.3/extend.bootstrap.3.0.3.popovers.scss */
+.popover {
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/*------------------------------------*\
+  $ Title
+\*------------------------------------*/
+/* line 50, ../../../../scss/extend/bootstrap/3.0.3/extend.bootstrap.3.0.3.popovers.scss */
+.popover-title {
+  background-color: white;
+}
+
+/* line 54, ../../../../scss/extend/bootstrap/3.0.3/extend.bootstrap.3.0.3.popovers.scss */
+.popover-title:before {
+  content: '\e84c';
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  text-decoration: inherit;
+  text-align: center;
+  margin-right: 0.5em;
+}

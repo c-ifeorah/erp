@@ -1,0 +1,287 @@
+/*------------------------------------*\
+  $$ Just Checking - Extend Pure Tables
+\*------------------------------------*/
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+  * Global Mixins
+Contents:
+  * Imports
+  * Table
+  * Media Queries
+Notes:
+  * This extends the purecss tables
+*/
+/*------------------------------------*\ 
+  $ Imports
+\*------------------------------------*/
+/*------------------------------------*\
+  $$ Just Checking - Global Mixins
+\*------------------------------------*/
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+Contents:
+  * Imports
+  * Utility
+    * Clearfix
+    * Reset Margin & Padding
+  * Borders
+  * Backgrounds
+  * Gradients
+  * Menus
+  * Buttons
+    * Default button
+    * Submit button
+  * Overlay
+  * Text Trim
+  * Scroll
+  * Links
+  * Icons
+  * Animations
+  * Visibility
+*/
+/*------------------------------------*\ 
+  $ Imports
+\*------------------------------------*/
+/*------------------------------------*\
+  $$ Just Checking - Global Variables
+\*------------------------------------*/
+/*
+Requires:
+  * SASS
+Contents:
+  * Colours
+    * Brand colours 
+    * Button & alert colours
+    * Background colours
+  * Scaffolding
+    * Max & Min Widths
+    * Default Breakpoints
+  * Forms
+  * Buttons
+    * Colours
+    * Sizes
+  * Margin & Padding
+  * Typography
+    * Font Family
+    * Text Colour
+    * Text size
+    * Text weight
+  * Borders
+  * Dimensions
+  * Shadows
+  * Tables
+  * Breakpoints
+*/
+/*------------------------------------*\
+  $ Colours
+\*------------------------------------*/
+/*
+1. White
+* FFFFFF
+
+2. The 3 Greys
+* F8F8F8   (Light)
+* CCCCCC (Mid)
+* 666666   (Dark)
+
+3. The 3 Blues
+* DDE1EC (Light)
+* 00528D  (Mid)
+* 001D47  (Dark)
+*/
+/* Brand colours */
+/* Button & alert colours */
+/* Background colours */
+/*------------------------------------*\
+  $ Scaffolding
+\*------------------------------------*/
+/* Max & Min Widths */
+/* Default Breakpoints */
+/*------------------------------------*\
+  $ Forms
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Buttons
+\*------------------------------------*/
+/* Colours */
+/* Sizes */
+/*------------------------------------*\
+  $ Margin & Padding
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Typography
+\*------------------------------------*/
+/* Font Family */
+/* Text Colour */
+/* Text size */
+/* Text weight */
+/*------------------------------------*\
+  $ Borders
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Dimensions
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Shadows
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Tables
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Breakpoints
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Utility
+\*------------------------------------*/
+/* Clearfix */
+/* Reset Margin & Padding */
+/*------------------------------------*\
+  $ Borders
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Backgrounds
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Gradients
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Menus
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Buttons
+\*------------------------------------*/
+/* Default button */
+/* Submit button */
+/*------------------------------------*\
+  $ Overlay
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Text Trim
+\*------------------------------------*/
+/*
+Requires:
+  * This requires a container with a set width
+*/
+/*------------------------------------*\
+  $ Scroll
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Links
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Icons
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Animations
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Visibility
+\*------------------------------------*/
+/*------------------------------------*\ 
+  $ Table
+\*------------------------------------*/
+/* line 37, ../../../scss/extend/pure/extend.pure.tables.scss */
+.pure-table-custom {
+  table-layout: fixed;
+  width: 100%;
+  margin-top: 1em;
+}
+/* line 44, ../../../scss/extend/pure/extend.pure.tables.scss */
+.pure-table-custom thead {
+  background-color: #00528d;
+  color: white;
+}
+/* line 48, ../../../scss/extend/pure/extend.pure.tables.scss */
+.pure-table-custom thead a {
+  color: white;
+  text-decoration: none;
+}
+/* line 58, ../../../scss/extend/pure/extend.pure.tables.scss */
+.pure-table-custom tbody .selected-row {
+  -webkit-animation-name: fadeOutBackground;
+  -webkit-animation-delay: 0;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-name: fadeOutBackground;
+  -moz-animation-delay: 0;
+  -moz-animation-duration: 2s;
+  -moz-animation-timing-function: ease;
+  -moz-animation-iteration-count: 1;
+  animation-name: fadeOutBackground;
+  animation-delay: 0;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+}
+/* line 66, ../../../scss/extend/pure/extend.pure.tables.scss */
+.pure-table-custom .selectable-rows tr:hover,
+.pure-table-custom .selectable-rows tr:hover td {
+  cursor: pointer;
+  background-color: #eeeeee;
+}
+/* line 73, ../../../scss/extend/pure/extend.pure.tables.scss */
+.pure-table-custom tr:nth-child(2n-1) td {
+  background-color: #f8f8f8;
+}
+/* line 78, ../../../scss/extend/pure/extend.pure.tables.scss */
+.pure-table-custom td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* line 83, ../../../scss/extend/pure/extend.pure.tables.scss */
+.pure-table-custom img {
+  vertical-align: middle;
+}
+
+@-webkit-keyframes fadeOutBackground {
+  /* line 89, ../../../scss/extend/pure/extend.pure.tables.scss */
+  from {
+    background-color: #eeeeee;
+  }
+
+  /* line 90, ../../../scss/extend/pure/extend.pure.tables.scss */
+  to {
+    background-color: white;
+  }
+}
+
+@-moz-keyframes fadeOutBackground {
+  /* line 89, ../../../scss/extend/pure/extend.pure.tables.scss */
+  from {
+    background-color: #eeeeee;
+  }
+
+  /* line 90, ../../../scss/extend/pure/extend.pure.tables.scss */
+  to {
+    background-color: white;
+  }
+}
+
+@keyframes fadeOutBackground {
+  /* line 89, ../../../scss/extend/pure/extend.pure.tables.scss */
+  from {
+    background-color: #eeeeee;
+  }
+
+  /* line 90, ../../../scss/extend/pure/extend.pure.tables.scss */
+  to {
+    background-color: white;
+  }
+}
+
+/*------------------------------------*\ 
+  $ Media Queries
+\*------------------------------------*/
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/

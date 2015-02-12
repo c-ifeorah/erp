@@ -1,0 +1,229 @@
+/*------------------------------------*\
+  $$ Just Checking - Extend Typography
+\*------------------------------------*/
+
+/*
+Requires:
+  * SASS
+  * Global Variables
+Contents:
+ 	* Imports 
+ 	* Base Font Size
+ 	* Default Font Size
+ 	* Headings
+ 	* Text Colour
+ 	* Horizontal Rules
+ 	* Media Queries
+*/
+
+
+
+
+/*------------------------------------*\
+	$ Imports
+\*------------------------------------*/
+
+@import "../../modules/_variables.scss";
+@import "../../modules/_media-queries"; 
+
+
+
+
+/*------------------------------------*\
+  $ Base Font Size
+\*------------------------------------*/
+
+html {
+	font-size: 62.5%;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Default Font Size
+\*------------------------------------*/
+
+body {
+	font-family: $fontSansSerif;
+	font-size: $baseFontSizeFallback; /* =13px */
+	font-size: $baseFontSize; /* 1.3rem */
+	color: $textColor;
+	line-height: 1.6;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Headings
+\*------------------------------------*/
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6 {	
+	text-rendering: optimizeLegibility;
+	margin: 2rem 0 1.2rem 0;
+	line-height: 1;
+}
+
+h1,
+.h1,
+.largest-text {
+	font-size: 26px;
+	font-size: 2.6rem; /* =36px */
+	margin-top: 0;
+	margin-bottom: $defaultMargin/3;
+	color: $brandBlue;
+}
+
+h2,
+.h2,
+.larger-text {
+	font-size: 20px;
+	font-size: 2rem; /* =24px */
+	color: $brandBlue;
+}
+
+h3,
+.h3,
+.large-text {
+	font-size: 16px;
+	font-size: 1.6rem; /* =20px */
+	color: $brandBlue;
+}
+
+h4,
+.h4 {
+	font-size: 14px;
+	font-size: 1.4rem; /* =16px */
+	color: $textColor;
+}
+
+h5,
+.h5 {
+	font-size: 12px;
+	font-size: 1.2rem; /* =14px */
+}
+
+h6,
+.h6 {
+	font-size: 11px;
+	font-size: 1.1rem; /* =12px */
+}
+
+
+
+
+/*------------------------------------*\
+  $ Text Colour
+\*------------------------------------*/
+
+.text-gray {
+	color: $grayMid;
+}
+
+.text-red {
+	color: $errorColor;
+}
+
+.text-white {
+	color: $white;
+}
+
+.text-blue {
+	color: $brandBlue;
+}
+
+.text-green {
+	color: $successColor;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Horizontal Rules
+\*------------------------------------*/
+
+hr {
+	background-color: $defaultBorderColor;
+	border-width: 0;
+	height: $defaultBorderWidth;
+	line-height: 0;
+	page-break-after:always;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Icons
+\*------------------------------------*/
+
+i {
+	// font-size: 2rem;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Media Queries
+\*------------------------------------*/
+
+/* >= 940px */
+
+@include min-screen($largeBreakPoint) {
+
+	/* Headings */
+
+	h1,
+	.h1,
+	.largest-text {
+		font-size: 34px;
+		font-size: 3.4rem;
+	}
+
+	h2,
+	.h2,
+	.larger-text {
+		font-size: 24px;
+		font-size: 2.4rem;
+	}
+
+	h3,
+	.h3,
+	.large-text,
+	legend {
+		font-size: 20px;
+		font-size: 2rem;
+	}
+
+	h4,
+	.h4 {
+		font-size: 16px;
+		font-size: 1.6rem;
+	}
+
+	h5,
+	.h5 {
+		font-size: 14px;
+		font-size: 1.4rem;
+	}
+
+	h6,
+	.h6 {
+		font-size: 12px;
+		font-size: 1.2rem;
+	}
+
+}

@@ -1,0 +1,36 @@
+.modalOverlay {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+}
+.modalLightbox {
+    position:absolute;
+    border-radius:14px;
+    padding:8px;
+    height: auto;
+    text-align: center;
+}
+.modalContent,
+.modalSetAttr {
+    border-radius:8px;
+    background:#fff;
+    padding:20px;
+}
+#currentAttrs {
+    margin: 0px auto;
+}
+.modalLeft {
+    display: inline;
+    float: left;
+}
+.modalCentre{
+    display: inline;
+}
+.modalRight {
+    display: inline;
+    float: right;
+}

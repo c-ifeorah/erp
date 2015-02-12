@@ -1,0 +1,34 @@
+/*------------------------------------*\
+  $$ Just Checking - Box-sizing
+\*------------------------------------*/
+
+/*
+Requires:
+  * SASS
+  * Compass
+Contents:
+  * Imports
+ 	* Box Sizing
+Notes:
+ 	* This is for IE8+ only
+*/
+
+
+
+
+/*------------------------------------*\
+  $ Imports
+\*------------------------------------*/
+
+@import "compass/css3/box-sizing"; 
+
+
+
+
+/*------------------------------------*\
+  $ Box Sizing
+\*------------------------------------*/
+
+* {
+	@include box-sizing(border-box);
+}

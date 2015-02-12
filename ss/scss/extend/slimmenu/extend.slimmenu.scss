@@ -1,0 +1,168 @@
+/*------------------------------------*\
+  $$ Just Checking - Slim Menu
+\*------------------------------------*/
+
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+  * Global Mixins
+Contents:
+  * Imports
+*/
+
+
+
+
+/*------------------------------------*\
+  $ Imports
+\*------------------------------------*/
+
+@import "../../modules/_mixins";
+
+
+
+
+/*------------------------------------*\
+  $ Original code
+\*------------------------------------*/
+
+.menu-collapser {
+  background-color: $brandBlue;
+  color: $white;
+  text-shadow: none;
+  padding-right: 0;
+}
+
+.collapse-button {
+  position: realtive;
+  width: 44px;
+  background-color: $brandBlue;
+  background-image: none;
+  box-shadow: none;
+  padding: 0;
+  margin:0;
+  right: 0;
+}
+
+.collapse-button:hover, .collapse-button:focus {
+  background-image: none;
+  background-color: $brandBlue;
+}
+
+ul.slimmenu li,
+ul.slimmenu li ul li {
+  background-color: $brandBlue;
+}
+
+/*  Changed the min-width from 150 to 196px to accomodate added icons and in all browsers including Mozilla  */
+ul.slimmenu li ul,
+ul.slimmenu li ul li {
+  min-width: 196px !important;
+}
+
+ul.slimmenu li ul {
+  padding: 0;
+}
+
+ul.slimmenu li a {
+  color: $white;
+  text-decoration: none;
+  font-size: 1.4rem;
+  text-shadow: none;
+  padding: 0 $defaultPadding;
+  height: 26px;
+  line-height: 2.4rem;
+}
+
+ul.slimmenu li a:hover {
+  background-color: $brandBlueDark;
+}
+
+ul.slimmenu > li {
+  @include border-left($defaultBorderWidth, $defaultBorderStyle, $brandBlueLight);
+  margin-right: 0;
+}
+
+.collapse-button {
+  border: none;
+  box-shadow: none;
+}
+
+/*ul.slimmenu li .sub-collapser:before {
+  content: '\e800';
+  margin-right: 0;
+}*/
+
+ul.slimmenu li .sub-collapser {
+  background: none;
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  // text-align: right;
+  // @include border-left($defaultBorderWidth, $defaultBorderStyle, $grayLight);
+  /*margin-left: $defaultMargin; */
+  /*height: 40px;*/
+}
+
+ul.slimmenu li ul li .sub-collapser {
+  float: right;
+}
+
+ul.slimmenu.collapsed li .sub-collapser {
+  position: absolute;
+  text-align: center;
+  width: 44px;
+  // @include border-left($defaultBorderWidth, $defaultBorderStyle, darken($brandBlueDark, 10%));
+  /*float: right;
+  height: 42px;
+  width: 42px;*/
+}
+
+ul.slimmenu.collapsed li ul li {
+  background-color: darken($brandBlueDark, 10%);
+}
+
+ul.slimmenu li .sub-collapser > i {
+  /*color: lighten($brandBlue, 10%);*/
+  color: $white;
+  font-size: 1.4rem;
+}
+
+ul.slimmenu li .sub-collapser > i:before {
+  margin-right: 0;
+}
+
+// Styling for the sub menu to the right to enable submenus appear on the left
+.slimmenu ul li:hover ul{
+    right: 196px !important;
+    left: auto !important;
+    text-align: left;
+}
+
+/*  Capture this Menu bar so submenus can be visible when an icon is used  */
+
+/*------------------------------------*\
+  $ Media Queries
+\*------------------------------------*/
+
+ /* Menu */
+
+/* >= 768px */
+
+// Targeting the User account menu to enable submenu fit into the width
+@include min-screen(812px) {
+
+.right-menu  {
+  margin-left: -4rem !important;
+}
+}  
+
+/* < 768px */
+
+@include max-screen(812px) {
+.right-menu  {
+  margin-left: 0rem;
+}
+}  

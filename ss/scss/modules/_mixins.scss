@@ -1,0 +1,403 @@
+/*------------------------------------*\
+  $$ Just Checking - Global Mixins
+\*------------------------------------*/
+
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+Contents:
+  * Imports
+  * Utility
+    * Clearfix
+    * Reset Margin & Padding
+  * Borders
+  * Backgrounds
+  * Gradients
+  * Menus
+  * Buttons
+    * Default button
+    * Submit button
+  * Overlay
+  * Text Trim
+  * Scroll
+  * Links
+  * Icons
+  * Animations
+  * Visibility
+*/
+
+
+
+
+/*------------------------------------*\ 
+  $ Imports
+\*------------------------------------*/
+
+@import "_variables";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/images";
+@import "compass/css3/border-radius";
+@import "compass/css3/transition";
+@import "compass/css3/transform";
+@import "compass/css3/box-shadow";
+
+
+
+
+
+/*------------------------------------*\
+  $ Utility
+\*------------------------------------*/
+
+/* Clearfix */
+
+@mixin clearfix {
+  overflow: hidden;
+  @include has-layout; 
+}
+
+/* Reset Margin & Padding */
+
+@mixin remove-margin-padding {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Borders
+\*------------------------------------*/
+
+@mixin border($width, $style, $color) {
+  border: $width $style $color;
+}
+
+@mixin border-left($width, $style, $color) {
+  border-left: $width $style $color;
+}
+
+@mixin border-right($width, $style, $color) {
+  border-right: $width $style $color;
+}
+
+@mixin border-bottom($width, $style, $color) {
+  border-bottom: $width $style $color;
+}
+
+@mixin border-top($width, $style, $color) {
+  border-top: $width $style $color;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Backgrounds
+\*------------------------------------*/
+
+@mixin textured() {
+  background: url('../../assets/images/png/bg-texture.png') repeat $white; 
+}
+
+@mixin textured-white() {
+  background: url('../../assets/images/png/white-linen.png') repeat $white;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Gradients
+\*------------------------------------*/
+
+@mixin lightGradient() {
+  @include background-image(linear-gradient($white, $grayFaint));
+}
+
+@mixin purpleGradient() {
+  @include background-image(linear-gradient($brandBlue, $brandBlueDark));
+}
+
+
+
+
+/*------------------------------------*\
+  $ Menus
+\*------------------------------------*/
+
+@mixin menu-base() {
+  height: $touchMinimum;
+  width: 100%;
+  background-color: $brandBlue;
+  color: $white;
+  // @include lightGradient();
+  // @include box-shadow(0 1px 1px $grayLight); 
+}
+
+// Position menu icons to the right & middle
+// Requires a relative positioned parent element
+@mixin menu-navigate-icon() {
+  position: absolute;
+  right: $defaultMargin;
+  top: 50%;
+  margin-top: -8px;
+  margin-top: -0.8rem;
+}
+
+
+
+/*------------------------------------*\
+  $ Buttons
+\*------------------------------------*/
+
+/* Default button */
+
+@mixin button-style() {
+  font-weight: 800;
+  padding: $defaultPadding/2 $defaultPadding/1.5;
+  height: 32px;
+  min-width: $touchMinimum;
+  color: $textColor;
+  background-color: $grayFaint;
+  // @include lightGradient();
+  @include border($defaultBorderWidth, $defaultBorderStyle, $defaultBorderColor);
+  @include border-radius($defaultBorderRadius);
+  border-bottom: $defaultBorderWidth $defaultBorderStyle $gray;
+}
+
+// Hover
+@mixin button-style-hover() {
+  background: $white;
+  color: $textColor;
+}
+
+// Active
+@mixin button-style-active() {
+  @include box-shadow($buttonActiveShadow);
+  background: $grayFaint;
+  @include border($defaultBorderWidth, $defaultBorderStyle, $defaultBorderColor);
+}
+
+// Focus
+@mixin button-style-focus() {
+  @include box-shadow($buttonFocusShadow); 
+  background: $grayFaint;
+}
+
+/* Submit button */
+
+@mixin button-style-submit() {
+  color: $white;
+  padding: $defaultPadding/2 $defaultPadding;
+  // @include background-image(linear-gradient($brandBlue, $brandBlueDark));
+  background-color: $brandBlue;
+  border: none;
+}
+
+// Hover
+@mixin button-style-submit-hover() {
+  color: $white;
+  background: $brandBlueDark;
+}
+
+// Active
+@mixin button-style-submit-active() {
+  // @include box-shadow($buttonActiveShadow);
+  background: $brandBlueDark; 
+}
+
+// Focus
+@mixin button-style-submit-focus() {
+  // @include box-shadow($buttonFocusShadow);
+  background: $brandBlueDark;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Overlay
+\*------------------------------------*/
+
+@mixin overlay($color, $opacity, $position, $zIndex) {
+  background-color: $color;
+  opacity: $opacity;
+  width: 100%;
+  height: 100%;
+  position: $position;
+  top: 0;
+  left: 0;
+  z-index: $zIndex;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Text Trim
+\*------------------------------------*/
+
+/*
+Requires:
+  * This requires a container with a set width
+*/
+
+@mixin trim-text() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Scroll
+\*------------------------------------*/
+
+@mixin scroll-y() {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+@mixin fix-touch-scrolling() {
+  transform: translate3d(0, 0, 0);
+}
+
+
+
+
+/*------------------------------------*\
+  $ Links
+\*------------------------------------*/
+
+@mixin touchLink() {
+  height: $touchMinimum;
+  min-width: $touchMinimum;
+  display: inline-block;
+  line-height: $touchMinimum;
+}
+
+@mixin removeTextStyle() {
+  text-decoration: none;
+  color: $textColor;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Icons
+\*------------------------------------*/
+
+@mixin fontelloIcon() {
+
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  text-decoration: inherit;
+  text-align: center;
+
+}
+
+
+
+
+/*------------------------------------*\
+  $ Animations
+\*------------------------------------*/
+
+@mixin animation($name, $duration, $delay, $ease, $iteration) {
+  -webkit-animation-name: $name;
+  -webkit-animation-delay: $delay;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-timing-function: $ease;
+  -webkit-animation-iteration-count: $iteration;
+
+
+  -moz-animation-name: $name;
+  -moz-animation-delay: $delay;
+  -moz-animation-duration: $duration;
+  -moz-animation-timing-function: $ease;
+  -moz-animation-iteration-count: $iteration;
+      
+  animation-name: $name;
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-timing-function: $ease;
+  animation-iteration-count: $iteration;
+}
+
+@mixin keyframes ($animation_name) {
+  @-webkit-keyframes $animation_name {
+    @content;
+  }
+
+  @-moz-keyframes $animation_name {
+    @content;
+  }
+
+  @keyframes $animation_name {
+    @content;
+  }
+}
+
+@mixin transition($transition) {
+  @include transition($transition);
+}
+
+@mixin transform($string){
+  @include transition($string);
+}
+
+@mixin scale($factor) {
+  @include scale($factor);
+}
+
+@mixin rotate($deg) {
+  @include rotate($deg);
+}
+
+@mixin skew($deg, $deg2) {
+  @include rotate($deg, $deg2);
+}
+
+@mixin translate($x, $y:0) {
+  @include translate($x, $y);
+}
+
+@mixin translate3d($x, $y: 0, $z: 0) {
+  @include translate3d($x, $y, $z);
+}
+
+@mixin perspective($value: 1000) {
+  @include perspective($value);
+}
+
+@mixin transform-origin($x:center, $y:center) {
+  @include transform-origin ($x $y);
+}
+
+
+
+
+/*------------------------------------*\
+  $ Visibility
+\*------------------------------------*/
+
+@mixin invisible() {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}

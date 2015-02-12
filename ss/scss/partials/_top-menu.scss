@@ -1,0 +1,81 @@
+/*------------------------------------*\
+$$ Just Checking - Top Menu
+\*------------------------------------*/
+
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+  * Global Mixins
+Contents:
+  * Imports
+  * Menu
+    * Menu base
+    * Links
+    * Title text
+    * The JC symbol
+  * Media Queries
+    * >= 768px
+*/
+
+
+
+
+/*------------------------------------*\
+  $ Imports
+\*------------------------------------*/
+
+@import "../modules/_mixins";
+@import "compass/typography/links/link-colors";
+@import "../modules/_media-queries";
+
+
+
+
+
+/*------------------------------------*\
+  $ Menu
+\*------------------------------------*/
+
+.top-menu {
+
+  /* Menu base */
+
+  @include menu-base();
+
+  // Styling specific for the top menu
+  // position: fixed;
+  // z-index: 3;
+
+  /* Links */
+
+  a {
+    color: $textColor;
+    text-decoration: none;
+  }
+
+}
+
+
+
+
+/*------------------------------------*\
+  $ Media Queries
+\*------------------------------------*/
+
+/* >= 940px */
+
+@include min-screen($largeBreakPoint) {
+
+  .page-header {
+    // @include lightGradient();
+  }
+
+  .top-menu {
+    height: $largeMenuHeight;
+    text-align: left;
+    padding: 0 $defaultPadding;
+  }
+
+}

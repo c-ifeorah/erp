@@ -1,0 +1,99 @@
+/*------------------------------------*\
+  $$ Just Checking - Extend Bootstrap Dropdowns
+\*------------------------------------*/
+
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+  * Global Mixins
+Contents:
+  * Imports
+  * The dropdown menu (ul)
+  * Hover/Focus state
+  * Positioning
+Notes:
+  * This extends the twitter bootstrap dropdowns feature
+*/
+
+
+
+
+/*------------------------------------*\
+  $ Imports
+\*------------------------------------*/
+
+@import "../../../modules/_mixins";
+
+
+
+
+/*------------------------------------*\
+  $ The dropdown menu (ul)
+\*------------------------------------*/
+
+.dropdown-menu {
+  font-size: $baseFontSize;
+  padding: 0;
+  @include border-radius($defaultBorderRadius);
+  @include border($defaultBorderWidth, $defaultBorderStyle, $defaultBorderColor);
+
+  li {
+    text-align: left;
+  }
+}
+
+
+
+
+/*------------------------------------*\
+  $ Hover/Focus state
+\*------------------------------------*/
+
+.dropdown-menu > li > a {
+  border-left: none;
+
+  &:hover,
+  &:focus {
+    color: $textColor;
+    background-color: $grayFaint;
+  }
+
+  @include border-bottom($defaultBorderWidth, $defaultBorderStyle, $defaultBorderColor);
+
+  min-height: $touchMinimum;
+  // line-height: $touchMinimum;
+  padding: $defaultPadding;
+  position: relative;
+}
+
+.dropdown-menu > li:first-child > a {
+  &:hover,
+  &:focus {
+    @include border-top-left-radius($defaultBorderRadius);
+    @include border-top-right-radius($defaultBorderRadius);
+  }
+}
+
+.dropdown-menu > li:last-child > a {
+  &:hover,
+  &:focus {
+    @include border-bottom-left-radius($defaultBorderRadius);
+    @include border-bottom-right-radius($defaultBorderRadius);
+  }
+
+  border-bottom: none;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Positioning
+\*------------------------------------*/
+
+.dropdown-menu.right {
+  right: 0;
+  left: auto;
+}

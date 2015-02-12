@@ -1,0 +1,126 @@
+/*------------------------------------*\
+  $$ Just Checking - Extend Pure Base
+\*------------------------------------*/
+
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+  * Global Mixins
+Contents:
+  * Imports
+  * Submit
+  * Default
+  * Position
+  * Icons
+  * Inline Button
+  * Button Sizes
+  * UI Sliders
+  * Pairwise Comparisons
+Notes:
+  * This extends the purecss buttons
+*/
+
+
+
+
+/*------------------------------------*\ 
+  $ Imports
+\*------------------------------------*/
+
+@import "../../modules/_mixins";
+
+
+
+
+/*------------------------------------*\
+  $ Definition List
+\*------------------------------------*/
+
+.definition-list-inline {
+  @include border-top($defaultBorderWidth, $defaultBorderStyle, $defaultBorderColor);
+  
+  dt,
+  dd {
+    @include border($defaultBorderWidth, $defaultBorderStyle, $defaultBorderColor);
+    border-top: none;
+    padding: $defaultPadding/2 $defaultPadding/1.4;
+  }
+  dt {
+    width: 20%;
+    background-color: $brandBlue;
+    font-weight: 800;
+    float: left;
+    border-right: none;
+    color: $white;
+  }
+  dd {
+    width: 80%;
+    float: right;
+    margin-bottom: 0;
+  }
+
+  @include clearfix();
+}
+
+dd {
+  margin: 0 0 $defaultMargin;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Grid changes
+\*------------------------------------*/
+
+.large-4 {
+  .definition-list-inline {
+    dt {
+      width: 40%;
+    }
+    dd {
+      width: 60%;
+    }
+  }
+
+}
+
+/*------------------------------------*\
+  $ UI Slider
+\*------------------------------------*/
+
+div.ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all {
+    background-color: #7ea7db;
+}
+
+a.ui-slider-handle.ui-state-default.ui-corner-all.ui-state-hover {
+    background-color: #292c70;
+}
+
+span.ui-slider-label.ui-slider-label-show {
+    font-weight: bold;
+    font-variant: small-caps;
+    text-transform: uppercase;
+}
+
+/*------------------------------------*\
+  $ Pairwise Comparison
+\*------------------------------------*/
+div.section-container {
+    font-weight: bold;
+    border-style: solid;
+}
+
+div.column.large-4 {
+    color: #406eba;
+    font-weight: bold;
+}
+
+/*------------------------------------*\
+  $ Text Font
+\*------------------------------------*/
+.text-bold {
+  font-weight:  bold;
+}

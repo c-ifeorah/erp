@@ -1,0 +1,91 @@
+/*------------------------------------*\
+$$ Just Checking - Forms
+\*------------------------------------*/
+
+/*
+Requires:
+  * SASS
+  * Global Variables
+Contents:
+  * Imports
+  * Button Container
+*/
+
+
+
+
+/*------------------------------------*\
+  $ Imports
+\*------------------------------------*/
+
+@import "../modules/_mixins";
+
+.table-cell{
+	display: table-cell;
+}
+
+.overflow-x{
+	overflow-x: auto;
+}
+
+.no-margin-padding{
+	margin: 0;
+	padding: 0;
+}
+
+.taskPlaceholder{
+	border: 1px dashed $brandBlue;
+	height: 50px;
+	border-radius: 4px;
+	margin: 5px 0;
+}
+
+.task-border{
+	background-color: white;
+	padding: 0.3em;
+	margin: 0 0 0.3em 0;
+	min-height: 50px;
+	cursor: move;
+	border: 1px solid $brandBlue;
+	background: white;
+	border-radius: 4px;
+	min-height: 50px;
+}
+
+.stage {
+	margin: 0 $defaultMargin/4;
+	min-width: 125px;
+	background: $grayFaint;
+	/*@include box-shadow(0 1px 1px $grayLight); */
+
+}
+
+/*.journeyBuckets td {
+	vertical-align: top;
+}*/
+
+/*.bucketUL {
+	margin: 0;
+	padding: 0;
+}*/
+
+/*.bucketUL li {
+	background-color: $white;
+	@include border($defaultBorderWidth, $defaultBorderStyle, $defaultBorderColor);
+	border-radius: 4px;
+	padding: $defaultPadding/3;
+	margin: 0 0 $defaultMargin/3 0;
+	min-height: 50px;
+	cursor: move;
+}*/
+
+/*.bucketUL li:hover {
+	background-color: $grayFaint; 
+}*/
+
+/*.connected, .bucketUL{
+	list-style: none;
+	padding: 0;
+	min-height: 20px;
+}
+*/

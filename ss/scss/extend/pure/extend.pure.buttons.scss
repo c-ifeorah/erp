@@ -1,0 +1,227 @@
+/*------------------------------------*\
+  $$ Just Checking - Extend Pure Buttons
+\*------------------------------------*/
+
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+  * Global Mixins
+Contents:
+  * Imports
+  * Submit
+  * Default
+  * Position
+  * Icons
+  * Inline Button
+  * Button Sizes
+  * Add Button Icon (Attached)
+  * Media Queries
+    * Mobile screen button size
+    * Mobile screen Add icon
+Notes:
+  * This extends the purecss buttons
+*/
+
+
+
+
+/*------------------------------------*\ 
+  $ Imports
+\*------------------------------------*/
+
+@import "../../modules/_mixins.scss";
+@import "compass/css3/box-shadow";
+@import "compass/css3/images";
+@import "compass/css3/border-radius";
+
+
+
+
+/*------------------------------------*\
+  $ Submit
+\*------------------------------------*/
+
+.pure-button-custom[type="submit"] {
+  @include button-style-submit();
+  margin-left:  $defaultMargin;
+}
+
+.pure-button-custom[type="submit"]:hover {
+  @include button-style-submit-hover();
+}
+
+.pure-button-custom[type="submit"]:focus {
+  @include button-style-submit-focus();
+}
+
+.pure-button-custom[type="submit"]:active {
+  @include button-style-submit-active();
+}
+
+
+
+/*------------------------------------*\
+  $ Default
+\*------------------------------------*/
+
+.pure-button-custom,
+.lt-ie9 .pure-button-custom {
+  @include button-style();
+  // Remove that annoying button highlight 
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.pure-button-custom:hover,
+.lt-ie9 .pure-button-custom:hover {
+  @include button-style-hover();
+}
+
+.pure-button-custom:focus,
+.lt-ie9 .pure-button-custom:focus {
+  @include button-style-focus();
+}
+
+.pure-button-custom:active,
+.lt-ie9 .pure-button-custom:active,
+.pure-button-custom.active {
+  @include button-style-active();
+}
+
+.pure-button-custom.active {
+  color: $brandBlue !important;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Colours
+\*------------------------------------*/
+
+.button-red {
+  background-color: $errorColor;
+  color: $white;
+
+  &:hover {
+    background-color: $errorColor;
+    color: $white;
+  }
+}
+
+
+
+/*------------------------------------*\
+  $ Position
+\*------------------------------------*/
+
+.button-fixed-bottom,
+.button-fixed-top {
+  position: fixed;
+  right: 0;
+  z-index: 100;
+  line-height: 26px;
+  line-height: 2.6rem;
+  overflow: visible;
+}
+
+.button-fixed-bottom {
+  bottom: 0;
+  @include border-bottom-left-radius(0);
+  @include border-bottom-right-radius(0);
+  border-bottom: none;
+}
+
+.button-fixed-top { 
+  top: 0;
+  @include border-top-left-radius(0);
+  @include border-top-right-radius(0);
+  border-top: none;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Icons
+\*------------------------------------*/
+
+.pure-button-custom {
+  [class^="icon-"]:before,
+  [class*=" icon-"]:before {
+    margin: 0;
+  }
+}
+
+
+
+
+/*------------------------------------*\
+  $ Inline Button
+\*------------------------------------*/
+
+.button-inline {
+  width: 100%;
+  min-width: 34px;
+  height: $inlineButtonHeight;
+  padding: $defaultPadding/2;
+}
+
+
+
+/*------------------------------------*\
+  $ Button Sizes
+\*------------------------------------*/
+
+.button-small {
+  height: 32px !important;
+}
+
+
+/*------------------------------------*\
+  $ Disabled
+\*------------------------------------*/
+
+.pure-button[disabled],
+.pure-button-disabled,
+.pure-button-disabled:hover,
+.pure-button-disabled:focus,
+.pure-button-disabled:active {
+  @include border($defaultBorderWidth, $defaultBorderStyle, $grayLight);
+}
+
+.pure-form button[type=submit] {
+  margin-top: 0;
+}
+
+/*------------------------------------*\
+  $ Add/Remove Button Icon (Attached)
+\*------------------------------------*/
+
+.pure-button-custom .all-add-icon  {
+    display:  none;
+}
+.pure-button-custom .small-remove-icon  {
+  font-size:  9px;
+}
+
+/*------------------------------------*\
+  $ Media Queries
+\*------------------------------------*/
+
+@include max-screen($largeBreakPoint) {
+/*  Modifying the size of buttons on small screens  */
+  
+  .pure-button-custom {
+    width:  1%;
+    margin-left: $defaultMargin;
+  }
+  .pure-button-custom label {
+    display: none;
+  }
+  .pure-button-custom .all-add-icon  {
+    display:  inline;
+    font-size:  8px;
+  }
+}

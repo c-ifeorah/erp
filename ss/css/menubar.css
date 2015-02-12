@@ -1,0 +1,103 @@
+.hMenu {
+	/*max-width: 900px;*/
+	margin: 0px 0px;
+	background:#4D7496;
+	padding: 0 10px;
+}
+.hMenuNav {
+	list-style: none;
+	*zoom: 1;
+	margin: 0; 
+	padding: 0; 
+}
+.hMenuNav a, a.hMenuTog { 
+  text-decoration: none; 
+  text-shadow: 2px 2px 2px #000;
+}
+.hMenuTog {
+	display:  none;
+	background: #4D7496;
+	padding: 10px 15px;
+	color: #fff;
+}
+.hMenuNav:before,
+.hMenuNav:after {
+	content: " "; 
+	display: table; 
+}
+.hMenuNav:after {
+	clear: both;
+}
+.hMenuNav ul {
+	list-style: none;
+	width: 9em;
+	margin: 0; 
+	padding: 0; 
+}
+.hMenuNav a {
+  margin: 0; 
+  padding: 0; 
+	padding: 5px 10px;
+	color:#fff;
+}
+.hMenuNav li {
+	position: relative;
+	margin: 0; 
+	padding: 0; 
+}
+.hMenuNav > li {
+	float: left;
+}
+.hMenuNav > li > .parent {
+	/*background-image: url("../imgs/system/vectorArrows-1.gif");*/
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.hMenuNav > li > a {
+	display: block;
+}
+.hMenuNav li  ul {
+	position: absolute;
+	left: -9999px;
+}
+.hMenuNav > li.hover > ul {
+	left: 0;
+}
+.hMenuNav li li.hover ul {
+	left: 100%;
+	top: 0;
+}
+.hMenuNav li li a {
+	display: block;
+	background: #4D7496;
+	position: relative;
+	z-index:100;
+}
+.hMenuNav li li li a {
+	background:#4D7496;
+	z-index:200;
+}
+
+@media screen and (max-width: 768px) {
+	.active {
+		display: block;
+	}
+	.hMenuNav > li {
+		float: none;
+	}
+	.hMenuNav > li > .parent {
+		background-position: 95% 50%;
+	}
+	.hMenuNav li li .parent {
+	  /*background-image: url("images/downArrow.png");*/
+		background-repeat: no-repeat;
+		background-position: 95% 50%;
+	}
+	.hMenuNav ul {
+		display: block;
+		width: 100%;
+	}
+  .hMenuNav > li.hover > ul , .hMenuNav li li.hover ul {
+		position: static;
+	}
+}

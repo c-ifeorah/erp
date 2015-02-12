@@ -1,0 +1,353 @@
+/*------------------------------------*\
+  $$ Just Checking - Extend Pure Forms
+\*------------------------------------*/
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+  * Global Mixins
+Contents:
+ 	* Imports
+ 	* Form Elements
+ 	* Form Errors
+ 	* Disabled & Readonly Element
+ 	* Labels
+ 	* Media Queries
+ 		* <= 480px
+ 		* Webkit Browser Specific
+ 		* >= 768px
+Notes:
+  * This extends the purecss forms
+*/
+/*------------------------------------*\
+  $ Imports
+\*------------------------------------*/
+/*------------------------------------*\
+  $$ Just Checking - Global Mixins
+\*------------------------------------*/
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+Contents:
+  * Imports
+  * Utility
+    * Clearfix
+    * Reset Margin & Padding
+  * Borders
+  * Backgrounds
+  * Gradients
+  * Menus
+  * Buttons
+    * Default button
+    * Submit button
+  * Overlay
+  * Text Trim
+  * Scroll
+  * Links
+  * Icons
+  * Animations
+  * Visibility
+*/
+/*------------------------------------*\ 
+  $ Imports
+\*------------------------------------*/
+/*------------------------------------*\
+  $$ Just Checking - Global Variables
+\*------------------------------------*/
+/*
+Requires:
+  * SASS
+Contents:
+  * Colours
+    * Brand colours 
+    * Button & alert colours
+    * Background colours
+  * Scaffolding
+    * Max & Min Widths
+    * Default Breakpoints
+  * Forms
+  * Buttons
+    * Colours
+    * Sizes
+  * Margin & Padding
+  * Typography
+    * Font Family
+    * Text Colour
+    * Text size
+    * Text weight
+  * Borders
+  * Dimensions
+  * Shadows
+  * Tables
+  * Breakpoints
+*/
+/*------------------------------------*\
+  $ Colours
+\*------------------------------------*/
+/*
+1. White
+* FFFFFF
+
+2. The 3 Greys
+* F8F8F8   (Light)
+* CCCCCC (Mid)
+* 666666   (Dark)
+
+3. The 3 Blues
+* DDE1EC (Light)
+* 00528D  (Mid)
+* 001D47  (Dark)
+*/
+/* Brand colours */
+/* Button & alert colours */
+/* Background colours */
+/*------------------------------------*\
+  $ Scaffolding
+\*------------------------------------*/
+/* Max & Min Widths */
+/* Default Breakpoints */
+/*------------------------------------*\
+  $ Forms
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Buttons
+\*------------------------------------*/
+/* Colours */
+/* Sizes */
+/*------------------------------------*\
+  $ Margin & Padding
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Typography
+\*------------------------------------*/
+/* Font Family */
+/* Text Colour */
+/* Text size */
+/* Text weight */
+/*------------------------------------*\
+  $ Borders
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Dimensions
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Shadows
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Tables
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Breakpoints
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Utility
+\*------------------------------------*/
+/* Clearfix */
+/* Reset Margin & Padding */
+/*------------------------------------*\
+  $ Borders
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Backgrounds
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Gradients
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Menus
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Buttons
+\*------------------------------------*/
+/* Default button */
+/* Submit button */
+/*------------------------------------*\
+  $ Overlay
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Text Trim
+\*------------------------------------*/
+/*
+Requires:
+  * This requires a container with a set width
+*/
+/*------------------------------------*\
+  $ Scroll
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Links
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Icons
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Animations
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Visibility
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Form Elements
+\*------------------------------------*/
+/* line 44, ../../../scss/extend/pure/extend.pure.forms.scss */
+.pure-form-custom {
+  /* Errors */
+}
+/* line 53, ../../../scss/extend/pure/extend.pure.forms.scss */
+.pure-form-custom label,
+.pure-form-custom input[type="text"],
+.pure-form-custom input[type="email"],
+.pure-form-custom input[type="password"],
+.pure-form-custom input[type="tel"],
+.pure-form-custom input[type="number"],
+.pure-form-custom input[type="search"],
+.pure-form-custom textarea,
+.pure-form-custom select {
+  font-size: 1.4rem;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  vertical-align: middle !important;
+}
+/* line 66, ../../../scss/extend/pure/extend.pure.forms.scss */
+.pure-form-custom input[type="text"],
+.pure-form-custom input[type="email"],
+.pure-form-custom input[type="password"],
+.pure-form-custom input[type="tel"],
+.pure-form-custom input[type="number"],
+.pure-form-custom input[type="search"],
+.pure-form-custom select {
+  height: 32px;
+}
+/* line 72, ../../../scss/extend/pure/extend.pure.forms.scss */
+.pure-form-custom input.adjust-for-button,
+.pure-form-custom select.adjust-for-button,
+.pure-form-custom textarea.adjust-for-button {
+  width: 86%;
+}
+/* line 78, ../../../scss/extend/pure/extend.pure.forms.scss */
+.pure-form-custom input.adjust-for-button + button,
+.pure-form-custom select.adjust-for-button + button,
+.pure-form-custom textarea.adjust-for-button + button {
+  width: 8%;
+  float: right;
+}
+/* line 83, ../../../scss/extend/pure/extend.pure.forms.scss */
+.pure-form-custom label {
+  font-weight: 800;
+}
+/* line 96, ../../../scss/extend/pure/extend.pure.forms.scss */
+.pure-form-custom input[type="text"]:focus,
+.pure-form-custom input[type="email"]:focus,
+.pure-form-custom input[type="password"]:focus,
+.pure-form-custom input[type="tel"]:focus,
+.pure-form-custom input[type="number"]:focus,
+.pure-form-custom input[type="search"]:focus,
+.pure-form-custom textarea:focus,
+.pure-form-custom select:focus {
+  border-color: #00528d;
+}
+/* line 104, ../../../scss/extend/pure/extend.pure.forms.scss */
+.pure-form-custom legend {
+  padding: 0;
+  font-weight: 800;
+  color: #00528d;
+  border-color: #cccccc;
+}
+/* line 111, ../../../scss/extend/pure/extend.pure.forms.scss */
+.pure-form-custom textarea {
+  resize: none;
+}
+/* line 116, ../../../scss/extend/pure/extend.pure.forms.scss */
+.pure-form-custom .form-error {
+  background-color: #c60f13;
+  color: white;
+  margin-top: 0;
+  padding: 0.5em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/*------------------------------------*\
+  $ Form Errors
+\*------------------------------------*/
+/* line 133, ../../../scss/extend/pure/extend.pure.forms.scss */
+.pure-form-custom {
+  /* Hide the select icon */
+}
+/* line 142, ../../../scss/extend/pure/extend.pure.forms.scss */
+.pure-form-custom .error,
+.pure-form-custom input[type="text"].error,
+.pure-form-custom input[type="email"].error,
+.pure-form-custom input[type="password"].error,
+.pure-form-custom input[type="tel"].error,
+.pure-form-custom input[type="number"].error,
+.pure-form-custom textarea.error,
+.pure-form-custom select.error {
+  border-color: #c60f13;
+}
+/* line 149, ../../../scss/extend/pure/extend.pure.forms.scss */
+.pure-form-custom .error span,
+.pure-form-custom span.error,
+.pure-form-custom span.error-div,
+.pure-form-custom span.error-select {
+  display: block;
+  padding: 0.5em 1em;
+  background: #c60f13;
+  color: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/*------------------------------------*\
+  $ Disabled & Readonly Element
+\*------------------------------------*/
+/* line 174, ../../../scss/extend/pure/extend.pure.forms.scss */
+.pure-form-custom input[readonly] {
+  background-color: white;
+}
+/* line 179, ../../../scss/extend/pure/extend.pure.forms.scss */
+.pure-form-custom option:disabled {
+  color: #111111;
+}
+
+/*------------------------------------*\
+  $ Labels
+\*------------------------------------*/
+/* line 194, ../../../scss/extend/pure/extend.pure.forms.scss */
+.pure-form-custom label,
+.pure-form-custom .label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*------------------------------------*\
+  $ Media Queries
+\*------------------------------------*/
+/* <= 480px */
+@media only screen and (max-width: 480px) {
+  /* line 245, ../../../scss/extend/pure/extend.pure.forms.scss */
+  .pure-form-custom label,
+  .pure-form-custom input[type="text"],
+  .pure-form-custom input[type="email"],
+  .pure-form-custom input[type="password"],
+  .pure-form-custom input[type="tel"],
+  .pure-form-custom input[type="number"] {
+    margin-bottom: 0;
+  }
+}
+/* Webkit/iOS Specific */
+/* >= 768px */
+/* This will target anything greater than ipad portrait */

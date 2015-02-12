@@ -1,0 +1,192 @@
+/*------------------------------------*\
+  $$ Just Checking - Extend Pure Tables
+\*------------------------------------*/
+
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+  * Global Mixins
+Contents:
+  * Imports
+  * Table
+  * Media Queries
+Notes:
+  * This extends the purecss tables
+*/
+
+
+
+
+/*------------------------------------*\ 
+  $ Imports
+\*------------------------------------*/
+
+@import '../../modules/_mixins.scss';
+
+
+
+
+/*------------------------------------*\ 
+  $ Table
+\*------------------------------------*/
+
+.pure-table-custom {
+  table-layout: fixed;
+  // @include border-radius($defaultBorderRadius);
+  width: 100%;
+  margin-top: $defaultMargin;
+
+  // Head
+  thead, .thead {
+    background-color: $brandBlue;
+    color: $white;
+
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+  
+  // Row hover
+  tbody {
+
+    // Viewed item
+    .selected-row {
+      @include animation(fadeOutBackground, 2s, 0, ease, 1);
+    }
+  }
+  
+  // Make table rows act as links
+  .selectable-rows {
+    tr:hover, 
+    tr:hover td, .tr:hover {
+      cursor: pointer;
+      background-color: $grayLighter;
+    }
+  }
+
+  // Zebra stripe
+  tr:nth-child(2n-1) td, .tr:nth-child(2n-1) {
+    background-color: $grayFaint;
+  }
+  
+  // Text trim
+  td {
+    @include trim-text();
+  }
+
+  // Image alignment
+  img {
+    vertical-align: middle;
+  }
+}
+
+@include keyframes(fadeOutBackground) {
+  from { background-color: $grayLighter; }
+  to { background-color: $white; }
+}
+
+
+
+
+/*------------------------------------*\ 
+  $ Media Queries
+\*------------------------------------*/
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+// @media only screen and (max-width: $mediumBreakPoint) {
+
+//   /* Force table to not be like tables anymore */
+//   .pure-table-custom {
+//     display: block; 
+//     border: none;
+
+//     thead,
+//     tbody,
+//     th,
+//     td,
+//     tr { 
+//       display: block; 
+//     }
+
+//     /* Hide table headers (but not display: none;, for accessibility) */
+//     thead tr { 
+//       position: absolute;
+//       top: -9999px;
+//       left: -9999px;
+//     }
+
+//     tr {
+//       margin-bottom: $defaultMargin;
+//       @include border($defaultBorderWidth, $defaultBorderStyle, $defaultBorderColor);
+
+//       td { 
+//         /* Behave  like a 'row' */
+//         border-left: none;
+//         // border-bottom: 1px solid #eee; 
+//         position: relative;
+//         padding-left: 35%;
+//       }
+    
+//       td:before { 
+//         /* Now like a table header */
+//         position: absolute;
+//         /* Top/left values mimic padding */
+//         top: 6px;
+//         left: 6px;
+//         width: 30%; 
+//         padding-right: 10px; 
+//         white-space: nowrap;
+//         font-weight: $defaultBold;
+//       }
+
+//       td:last-child {
+//         border: none;
+//       }
+
+//     }
+
+//   }
+
+//   /* Labels */
+
+//   .table-systems {
+
+//     td:nth-of-type(1):before { content: 'System'; }
+//     td:nth-of-type(2):before { content: 'Chart'; }
+//     td:nth-of-type(3):before { content: 'Status'; }
+//     td:nth-of-type(4):before { content: 'Last Update'; }
+
+//   }
+
+//   .table-logins {
+
+//     td:nth-of-type(1):before { content: 'Name'; }
+//     td:nth-of-type(2):before { content: 'Email'; }
+//     td:nth-of-type(3):before { content: 'Date'; }
+//     td:nth-of-type(4):before { content: 'Time'; }
+
+//   }
+
+//   .table-installations {
+
+//     td:nth-of-type(1):before { content: 'No.'; }
+//     td:nth-of-type(2):before { content: 'Chart'; }
+//     td:nth-of-type(3):before { content: 'Evaluation'; }
+//     td:nth-of-type(4):before { content: 'Start Date'; }
+//     td:nth-of-type(5):before { content: 'End Date'; }
+
+//   }
+
+//   // Overwrite pure
+//   .pure-table-bordered tbody>tr:last-child td {
+//     border-bottom-width: 1px;
+//   }
+
+// }

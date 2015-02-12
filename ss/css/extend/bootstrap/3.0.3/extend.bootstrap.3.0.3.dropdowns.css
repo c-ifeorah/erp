@@ -1,0 +1,254 @@
+/*------------------------------------*\
+  $$ Just Checking - Extend Bootstrap Dropdowns
+\*------------------------------------*/
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+  * Global Mixins
+Contents:
+  * Imports
+  * The dropdown menu (ul)
+  * Hover/Focus state
+  * Positioning
+Notes:
+  * This extends the twitter bootstrap dropdowns feature
+*/
+/*------------------------------------*\
+  $ Imports
+\*------------------------------------*/
+/*------------------------------------*\
+  $$ Just Checking - Global Mixins
+\*------------------------------------*/
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+Contents:
+  * Imports
+  * Utility
+    * Clearfix
+    * Reset Margin & Padding
+  * Borders
+  * Backgrounds
+  * Gradients
+  * Menus
+  * Buttons
+    * Default button
+    * Submit button
+  * Overlay
+  * Text Trim
+  * Scroll
+  * Links
+  * Icons
+  * Animations
+  * Visibility
+*/
+/*------------------------------------*\ 
+  $ Imports
+\*------------------------------------*/
+/*------------------------------------*\
+  $$ Just Checking - Global Variables
+\*------------------------------------*/
+/*
+Requires:
+  * SASS
+Contents:
+  * Colours
+    * Brand colours 
+    * Button & alert colours
+    * Background colours
+  * Scaffolding
+    * Max & Min Widths
+    * Default Breakpoints
+  * Forms
+  * Buttons
+    * Colours
+    * Sizes
+  * Margin & Padding
+  * Typography
+    * Font Family
+    * Text Colour
+    * Text size
+    * Text weight
+  * Borders
+  * Dimensions
+  * Shadows
+  * Tables
+  * Breakpoints
+*/
+/*------------------------------------*\
+  $ Colours
+\*------------------------------------*/
+/*
+1. White
+* FFFFFF
+
+2. The 3 Greys
+* F8F8F8   (Light)
+* CCCCCC (Mid)
+* 666666   (Dark)
+
+3. The 3 Blues
+* DDE1EC (Light)
+* 00528D  (Mid)
+* 001D47  (Dark)
+*/
+/* Brand colours */
+/* Button & alert colours */
+/* Background colours */
+/*------------------------------------*\
+  $ Scaffolding
+\*------------------------------------*/
+/* Max & Min Widths */
+/* Default Breakpoints */
+/*------------------------------------*\
+  $ Forms
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Buttons
+\*------------------------------------*/
+/* Colours */
+/* Sizes */
+/*------------------------------------*\
+  $ Margin & Padding
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Typography
+\*------------------------------------*/
+/* Font Family */
+/* Text Colour */
+/* Text size */
+/* Text weight */
+/*------------------------------------*\
+  $ Borders
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Dimensions
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Shadows
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Tables
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Breakpoints
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Utility
+\*------------------------------------*/
+/* Clearfix */
+/* Reset Margin & Padding */
+/*------------------------------------*\
+  $ Borders
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Backgrounds
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Gradients
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Menus
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Buttons
+\*------------------------------------*/
+/* Default button */
+/* Submit button */
+/*------------------------------------*\
+  $ Overlay
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Text Trim
+\*------------------------------------*/
+/*
+Requires:
+  * This requires a container with a set width
+*/
+/*------------------------------------*\
+  $ Scroll
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Links
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Icons
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Animations
+\*------------------------------------*/
+/*------------------------------------*\
+  $ Visibility
+\*------------------------------------*/
+/*------------------------------------*\
+  $ The dropdown menu (ul)
+\*------------------------------------*/
+/* line 38, ../../../../scss/extend/bootstrap/3.0.3/extend.bootstrap.3.0.3.dropdowns.scss */
+.dropdown-menu {
+  font-size: 1.4rem;
+  padding: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #cccccc;
+}
+/* line 44, ../../../../scss/extend/bootstrap/3.0.3/extend.bootstrap.3.0.3.dropdowns.scss */
+.dropdown-menu li {
+  text-align: left;
+}
+
+/*------------------------------------*\
+  $ Hover/Focus state
+\*------------------------------------*/
+/* line 56, ../../../../scss/extend/bootstrap/3.0.3/extend.bootstrap.3.0.3.dropdowns.scss */
+.dropdown-menu > li > a {
+  border-left: none;
+  border-bottom: 1px solid #cccccc;
+  min-height: 44px;
+  padding: 1em;
+  position: relative;
+}
+/* line 60, ../../../../scss/extend/bootstrap/3.0.3/extend.bootstrap.3.0.3.dropdowns.scss */
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  color: #333333;
+  background-color: #f8f8f8;
+}
+
+/* line 75, ../../../../scss/extend/bootstrap/3.0.3/extend.bootstrap.3.0.3.dropdowns.scss */
+.dropdown-menu > li:first-child > a:hover, .dropdown-menu > li:first-child > a:focus {
+  -moz-border-radius-topleft: 3px;
+  -webkit-border-top-left-radius: 3px;
+  border-top-left-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -webkit-border-top-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+/* line 81, ../../../../scss/extend/bootstrap/3.0.3/extend.bootstrap.3.0.3.dropdowns.scss */
+.dropdown-menu > li:last-child > a {
+  border-bottom: none;
+}
+/* line 83, ../../../../scss/extend/bootstrap/3.0.3/extend.bootstrap.3.0.3.dropdowns.scss */
+.dropdown-menu > li:last-child > a:hover, .dropdown-menu > li:last-child > a:focus {
+  -moz-border-radius-bottomleft: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+/*------------------------------------*\
+  $ Positioning
+\*------------------------------------*/
+/* line 98, ../../../../scss/extend/bootstrap/3.0.3/extend.bootstrap.3.0.3.dropdowns.scss */
+.dropdown-menu.right {
+  right: 0;
+  left: auto;
+}

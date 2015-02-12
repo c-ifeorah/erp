@@ -1,0 +1,192 @@
+/*------------------------------------*\
+	$$ Just Checking - Base
+\*------------------------------------*/
+
+/*
+Requires:
+  * SASS
+  * Compass
+  * Global Variables
+  * Global Mixins
+Contents:
+  * Imports
+  * Scaffolding
+    * Page Wrapper
+    * Content Wrapper
+    * >= 940px
+  * Rainbow Pattern
+  * Logo & Symbol
+    * >= 940px
+  * Loader
+  * No Results
+  * Login Page
+*/
+
+
+
+
+/*------------------------------------*\
+  $ Imports
+\*------------------------------------*/
+
+@import "modules/_mixins";
+@import "modules/_media-queries"; 
+
+
+
+
+/*------------------------------------*\
+  $ Scaffolding
+\*------------------------------------*/
+
+html {
+  background: white !important;
+}
+
+// html, body {
+//   height: 100%;
+// }
+
+/* Page Wrapper */
+
+// .page-wrapper,
+// [role="main"] {
+//   height: 100%;
+//   // // @include scroll-y();
+//   // overflow: hidden;
+//   // @include box-shadow(0 0 8px $gray);
+// }
+
+.page-inner {
+  // height: 100%;
+  // padding-bottom: $defaultPadding*4;
+  // @include scroll-y();
+  // position: relative;
+  // z-index: 1;
+}
+
+// .content-wrapper {
+//   max-width: 100%;
+//   height: 100%;
+//   min-height: 100%;
+//   // padding: $defaultPadding $defaultPadding*2;
+// }
+
+.fluid-wrapper,
+.fixed-wrapper {
+  margin: $defaultMargin auto;
+  background-color: white;
+}
+
+.fixed-wrapper {
+  max-width: 100%;
+}
+
+
+/*------------------------------------*\
+  $ Loader
+\*------------------------------------*/
+
+.loader-container {
+  position: relative;
+  min-height: 80px;
+}
+
+
+
+
+/*------------------------------------*\
+  $ No Results
+\*------------------------------------*/
+
+.no-results {
+  width: 100%;
+  text-align: center;
+  font-size: 200%;
+  color: $grayLight;
+}
+
+
+
+
+/*------------------------------------*\
+  $ Images
+\*------------------------------------*/
+
+img {
+  max-width: 100%;
+}
+
+/* ---------------------------------  */
+/*  Login page-inner*/
+/*  --------------------------------  */
+
+.login-wrapper  {
+  background-color: $brandBlue !important;
+  //background-position:  left center !important;
+  //background-size:  60% 80% !important;
+  //background-repeat:  no-repeat !important;
+  //background-attachment:  fixed;
+}
+.login-page {
+  display:  inline-block;
+}
+
+.login-box  {
+  float:  center !important;
+  height: 30em  !important;
+  width:  30em  !important;
+  margin-top: 10em !important;
+  padding-bottom: 0  !important;
+  box-shadow: 5px 2px 20pt 4pt $grayDark;
+  display: block  !important;
+}
+
+/*------------------------------------*\
+  $ Media Queries
+\*------------------------------------*/
+
+/* >= 940px */
+
+@include min-screen($largeBreakPoint) {
+
+  /* Scaffolding */
+
+  html {
+    background: $white; 
+  }
+
+  .fluid-wrapper,
+  .fixed-wrapper {
+    margin: $fixedWrapperMargin auto;
+    background-color: white;
+    padding: $defaultPadding*1.5;
+    //  @include border($defaultBorderWidth, $defaultBorderStyle, $gray);
+    //  @include border-radius($defaultBorderRadius);
+    //  @include box-shadow(0 1px 1px $gray);
+  
+
+  }
+}
+
+@include max-screen($largeBreakPoint) {
+
+  /*  The login box for smaller screens */
+
+  .login-box  {
+    float:  center !important;
+    height: 25em  !important;
+    width:  25em  !important;
+    margin-top: 10em  !important;
+    padding-bottom: 0  !important;
+    box-shadow: 5px 2px 20pt 4pt $grayDark;
+    display: block;
+  }
+
+  .login-legend-box {
+    width:  75% !important;
+  }
+  .mascot-img {
+    width:  25% !important;
+  }
+}
